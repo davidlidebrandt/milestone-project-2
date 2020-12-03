@@ -1,0 +1,31 @@
+body {
+    font-family: 'Nerko One', cursive;
+}
+.align-center {
+    text-align: center;
+}
+.italic {
+    font-style: italic;
+}
+/*index.html*/
+.nav-window {
+    width: 50%;
+    height: 70%;
+    background-color: #FAF3D1;
+    margin: 0 auto;
+    margin-top: 40px;
+    border-radius: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    box-shadow: 1px 1px 1px black;
+}
+
+.window-item {
+    margin-bottom: 15px;
+    letter-spacing: 1.3px;
+}
+
+.actions {
+    margin-top: 40px;
+}
+

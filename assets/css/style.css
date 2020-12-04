@@ -7,6 +7,21 @@ body {
 .italic {
     font-style: italic;
 }
+
+.base-modal {
+    display: none;
+    width: 60%;
+    height: 60%;
+    border: solid 1px black;
+    position: absolute;
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px grey;
+    z-index: 100;
+    background-color: #F4FAEF;
+    left: 20%;
+    top: 20%;
+    text-align: center;
+}
 /*index.html*/
 .nav-window {
     width: 50%;
@@ -27,6 +42,22 @@ body {
 
 .actions {
     margin-top: 40px;
+}
+
+.close-btn {
+    border: solid 1px black;
+    box-shadow: 1px 1px 1px black;
+    background-color: #F8C9C9;
+    border-radius: 5px;
+    bottom: 0px;
+}
+
+.main-menu-btn {
+    border: none;
+    border-radius: 10px;
+    background-color: #ECF9E6;
+    padding-left: 6px;
+    padding-right: 6px;
 }
 
 /*gamepage.html*/

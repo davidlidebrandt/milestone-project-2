@@ -29,3 +29,17 @@ body {
     margin-top: 40px;
 }
 
+/*gamepage.html*/
+.card-parent {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.card {
+    height: 80px;
+    width: 50px;
+    border-radius: 8px;
+    border: solid 3px black;
+    background-color: #E5EFEE;
+    margin-bottom: 15px;
+}

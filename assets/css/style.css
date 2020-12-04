@@ -58,6 +58,56 @@ body {
     background-color: #ECF9E6;
     padding-left: 6px;
     padding-right: 6px;
+    box-shadow: 0.5px 0.5px 0.5px grey;
+}
+
+
+.on-btn {
+    background-color: #71E2AD;
+    border: solid 1px grey;
+    border-radius: 5px;
+    width: 40px;
+    vertical-align: middle;
+    margin-left: 20px;
+    box-shadow: 0.5px 0.5px 0.5px grey;
+
+}
+
+.off-btn {
+    background-color: #F8C9C9;
+    border: solid 1px grey;
+    border-radius: 5px;
+    width: 40px;
+    vertical-align: middle;
+    margin-left: 20px;
+    box-shadow: 0.5px 0.5px 0.5px grey;
+}
+
+.circle-on {
+    border-radius: 50%;
+    background-color: black;
+    width: 15px;
+    height: 15px;
+    display: block;
+    float: left;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+
+.circle-off {
+    border-radius: 50%;
+    background-color: black;
+    width: 15px;
+    height: 15px;
+    display: block;
+    float: right;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+#sound-btn {
+    width: 50px;
 }
 
 /*gamepage.html*/

@@ -22,6 +22,7 @@ body {
     top: 20%;
     text-align: center;
 }
+
 /*index.html*/
 .nav-window {
     width: 50%;
@@ -59,6 +60,8 @@ body {
     padding-left: 6px;
     padding-right: 6px;
     box-shadow: 0.5px 0.5px 0.5px grey;
+    display: inline;
+    color: black;
 }
 
 
@@ -146,4 +149,23 @@ body {
     text-align: center;
     border-radius: 10px;
     box-shadow: 1px 1px 1px black;
+}
+
+.game-over-modal {
+    display: block;
+}
+
+#nav-btn-one {
+    background-color: #F4FAEF;
+    border: none;
+    margin-left: 10px;
+    float: left;
+}
+
+
+#nav-btn-two {
+    background-color: #F4FAEF;
+    border: none;
+    margin-right: 10px;
+    float: right;
 }

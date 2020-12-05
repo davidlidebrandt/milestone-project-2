@@ -8,6 +8,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"> </script>
+    <script type="text/javascript"> (function(){ emailjs.init("user_12ZBH7SJnVUccb7pYy1eO");})(); </script>
 </head>
 <body>
 <header><div class="menu"><span class="menu-itm">HOME</span><span class="menu-itm">RESTART GAME</span></div></header>
@@ -26,18 +28,23 @@
 <div class="col-3"><div class="card"></div></div>
 <div class="col-3"><div class="card"></div></div>
 <div class="base-modal game-over-modal">
-<h5>You finished the game with 100 points</h5>
-<form>
+<h5 class="cus-h5">You finished the game with 100 points</h5>
+<div class="form-parent">
+<form id="email-form" onsubmit="return sendMail(this);">
   <label for="email">Enter Your Email Below To Recieve An Email With Your Score:</label><br>
-  <input type="email" id="email" name="email" required><br>
- 
+  <input class="input-field" type="email" id="email" name="email" required><br>
+  <button class="submit-btn" type="submit">Send</button>
 </form>
+</div>
+
 <button id="nav-btn-one">HOME</button>
 <button id="nav-btn-two">NEW GAME</button>
 </div>
 
 </div></div>
 <div class="timer">SECONDS LEFT</div>
-    
+
+<script src="assets/javascript/myjs.js"></script>  
+<script src="assets/javascript/sendemail.js"></script>  
 </body>
 </html>

@@ -8,6 +8,10 @@ body {
     font-style: italic;
 }
 
+.no-pad {
+    padding: 0;
+}
+
 .base-modal {
     display: none;
     width: 60%;
@@ -120,13 +124,15 @@ body {
 }
 
 .card {
-    height: 80px;
-    width: 50px;
+    height: 120px;
+    width: 80px;
     border-radius: 8px;
     border: solid 2px black;
     background-color: #E5EFEE;
     margin-bottom: 15px;
     box-shadow: 1px 1px 1px grey;
+    margin: 0 auto;
+    margin-top: 20px;
 }
 
 .menu {
@@ -144,6 +150,7 @@ body {
 
 .timer {
     margin: 0 auto;
+    margin-top: 20px;
     width: 40%;
     background-color: #0EE773;
     text-align: center;
@@ -180,6 +187,7 @@ body {
 }
 
 .submit-btn {
+    margin-top: 5px;
     border-radius: 5px;
     background-color: #D0DFF5;
 }

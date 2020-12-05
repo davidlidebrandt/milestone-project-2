@@ -156,16 +156,39 @@ body {
 }
 
 #nav-btn-one {
+    position: absolute;
     background-color: #F4FAEF;
     border: none;
-    margin-left: 10px;
-    float: left;
+    left: 10px;
+    bottom: 20px;
 }
 
 
 #nav-btn-two {
+    position: absolute;
     background-color: #F4FAEF;
     border: none;
-    margin-right: 10px;
-    float: right;
+    right: 10px; 
+    bottom: 20px;  
 }
+
+.input-field {
+    width: 80%;
+    border-radius: 5px;
+    border: solid 0.5px grey;
+    box-shadow: box-shadow: 1px 1px 1px grey;
+}
+
+.submit-btn {
+    border-radius: 5px;
+    background-color: #D0DFF5;
+}
+
+.cus-h5 {
+    margin-top: 20px;
+}
+
+.form-parent {
+    margin-top: 20px;
+}
+

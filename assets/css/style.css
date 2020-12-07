@@ -54,7 +54,7 @@ body {
     box-shadow: 1px 1px 1px black;
     background-color: #F8C9C9;
     border-radius: 5px;
-    bottom: 0px;
+   
 }
 
 .main-menu-btn {
@@ -96,7 +96,7 @@ body {
     width: 15px;
     height: 15px;
     display: block;
-    float: left;
+    float: right;
     padding-top: 0px;
     padding-bottom: 0px;
 }
@@ -108,7 +108,7 @@ body {
     width: 15px;
     height: 15px;
     display: block;
-    float: right;
+    float: left;
     padding-top: 0px;
     padding-bottom: 0px;
 }
@@ -146,6 +146,7 @@ body {
 .menu-itm {
     margin-left: 10px;
     margin-right: 10px;
+    color: black;
 }
 
 .timer {
@@ -198,5 +199,9 @@ body {
 
 .form-parent {
     margin-top: 20px;
+}
+
+.sound {
+    
 }
 

@@ -149,18 +149,31 @@ body {
     color: black;
 }
 
-.timer {
+#timer {
     margin: 0 auto;
     margin-top: 20px;
     width: 40%;
-    background-color: #0EE773;
     text-align: center;
     border-radius: 10px;
     box-shadow: 1px 1px 1px black;
+    min-width: 100px;
+    min-height: 100px;
+}
+
+.green-timer {
+    background-color: #0EE773;
+}
+
+.yellow-timer {
+    background-color: #FBFB08;
+}
+
+.red-timer {
+    background-color: #F13619;
 }
 
 .game-over-modal {
-    display: block;
+
 }
 
 #nav-btn-one {

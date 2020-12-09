@@ -17,7 +17,7 @@ $(document).ready(function() {
   }); 
 
    $("#how-to").click(function () {
-     $(".hs-modal").show(500);
+     $(".ht-modal").show(500);
   }); 
 
   $(".close-btn").click(function(){

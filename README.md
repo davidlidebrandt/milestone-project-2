@@ -84,8 +84,28 @@ Adobe XD was used to create the wireframes and mockups for the project
 
 ## Testing
 
+All of the testing in the project was done manually, the main way of doing so was to use the console log and printing
+out corresponding values during certain parts of the execution of the code. A lot of testing was also done by just
+trying out the different functions the way they were intended and seeing if they worked correctly.
 
-### User Stories
+### A list of tests that where done
+
+* When the sound setting button was pressed a console log message was being printed with the corresponding sound 
+setting value to make sure it turned off and on as intended.
+
+### Bugs
+
+The first bug that occured was that when you returned from the game page to the index page the sound settings were 
+still set to what ever the user had chosen before but showed "off" regardless. The soulution was to separate the
+javascript for the two pages in to two different files so that the value was initalized to the default value when ever
+the user returned home.
+
+Trying to sort the array that displays the different highscores did not work using array.sort() method since that 
+method only sorts the items by their first number. The was solved by using the answer from user "dy_" in this stackflow post https://stackoverflow.com/questions/1063007/how-to-sort-an-array-of-integers-correctly,
+which basically makes a typedArray copy of the array which then can be sorted using the arrays.sort() method.
+
+
+## User Stories
 
 
 ## Deployment

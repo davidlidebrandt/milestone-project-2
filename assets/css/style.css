@@ -118,6 +118,7 @@ body {
 }
 
 /*gamepage.html*/
+
 .card-parent {
     margin-top: 40px;
     margin-bottom: 40px;
@@ -152,12 +153,11 @@ body {
 #timer {
     margin: 0 auto;
     margin-top: 20px;
+    margin-bottom: 20px;
     width: 40%;
     text-align: center;
     border-radius: 10px;
     box-shadow: 1px 1px 1px black;
-    min-width: 100px;
-    min-height: 100px;
 }
 
 .green-timer {
@@ -214,7 +214,13 @@ body {
     margin-top: 20px;
 }
 
-.sound {
-    
+.bell {
+    height: 120px;
+    width: 80px;
+    margin: 0 auto;
+    margin-top: 20px;
+    background-repeat: no-repeat;
+    background-image: url("../images/icons/bell.png");
+    background-size: contain;
 }
 

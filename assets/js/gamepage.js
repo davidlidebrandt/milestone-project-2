@@ -15,6 +15,10 @@
      countDownTimer();
   });
 
+  $(".card").click(function(){
+      $(this).removeClass("card");
+  });
+
 }); //end of ready function
 
 
@@ -35,8 +39,8 @@ function countDownTimer() {
 
 function generateRandomClass () {
   
-  let cardclasses = ["red","red-2","blue","blue-2","green","green-2","yellow", "yellow-2"
-  ,"red","red-2","blue","blue-2","green","green-2","yellow", "yellow-2"];
+  let cardclasses = ["bell","bell-copy","snowglobe","snowglobe-copy","toy","toy-copy","pinetree", "pinetree-copy"
+  ,"pinetree-snow","pinetree-snow-copy","present","present-copy","christmaspresent","christmaspresent-copy","giftbox", "giftbox-copy"];
   let idchooser = 1;
   let copyofcardclasses = cardclasses.slice();
   let numberofcards = 16;
@@ -45,6 +49,7 @@ function generateRandomClass () {
   for(let i = 0; i < initalclasses; i++) {
     let currentclass = copyofcardclasses[Math.floor(Math.random() * (numberofcards))];
     $("#" + idchooser).addClass(currentclass);  
+    $("#" + idchooser).addClass("card-backside");  
     copyofcardclasses.splice(copyofcardclasses.indexOf(currentclass),1);
     console.log(currentclass);
     idchooser++;

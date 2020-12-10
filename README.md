@@ -91,7 +91,11 @@ trying out the different functions the way they were intended and seeing if they
 ### A list of tests that where done
 
 * When the sound setting button was pressed a console log message was being printed with the corresponding sound 
-setting value to make sure it turned off and on as intended.
+setting value to make sure it turned off and on as intended, which it did.
+
+* The function which generates a random class to the cards was tested in the development by adding placeholder
+values to the array which would hold these class names and using the console.log function to print them to the screen.
+This function worked well from the start and no issues were found.
 
 ### Bugs
 

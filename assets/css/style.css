@@ -187,7 +187,7 @@ body {
     width: 80%;
     border-radius: 5px;
     border: solid 0.5px grey;
-    box-shadow: box-shadow: 1px 1px 1px grey;
+    box-shadow: 1px 1px 1px grey;
 }
 
 .submit-btn {
@@ -237,11 +237,11 @@ body {
     background-image: url("../images/icons/pinetree.png");
 }
 
-.pinetree-snow {
+.pinetreesnow {
     background-image: url("../images/icons/pinetree-snow.png");
 }
 
-.pinetree-snow-copy {
+.pinetreesnow-copy {
     background-image: url("../images/icons/pinetree-snow.png");
 }
 
@@ -269,7 +269,7 @@ body {
     background-image: url("../images/icons/giftbox.png");
 }
 
-.card-backside {
+.card-flipped {
     height: 120px;
     width: 80px;
     margin: 0 auto;
@@ -294,3 +294,17 @@ body {
     margin-top: 20px;
     background-image: url("../images/icons/calendar.png")
 }
+
+.card-copy {
+    height: 120px;
+    width: 80px;
+    box-shadow: 1px 1px 1px grey;
+    border-radius: 8px;
+    border: solid 2px black;
+    background-color: #E5EFEE;
+    margin-bottom: 15px;
+    margin: 0 auto;
+    margin-top: 20px;
+    background-image: url("../images/icons/calendar.png")
+}
+

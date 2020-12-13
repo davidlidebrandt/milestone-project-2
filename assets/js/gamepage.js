@@ -18,8 +18,13 @@
      
   });
 // game logic goes here: actions when cards are clicked
-  $(".card").click(function(){
+  $(".card").on("click", clickedCard);
+
+}); //end of ready function
+
+function clickedCard(){
       let id = this.id;
+      $(this).off();
       //executed if no other card is flipped
       if(localStorage.getItem("clicks")=="0") {
           console.log(localStorage.getItem("clicks"))
@@ -37,7 +42,8 @@
       }
       //executed if another card is already flipped
       else if(localStorage.getItem("clicks")=="1") {
-          console.log("inside else if statement")
+           $(".card").off();
+        console.log("inside else if statement")
         console.log(localStorage.getItem("clicks"))
           $(this).removeClass("card");
           console.log(this.className);
@@ -55,6 +61,9 @@
           localStorage.setItem("gamefinished", currentvalue.toString);
           resetTimer();
           localStorage.setItem("lastcard", " ");
+          console.log(localStorage.getItem("clicks"));
+          console.log(localStorage.getItem("lastcard"));
+           $(".card").on("click", clickedCard);
           }
           //executed if no match is found
           else {
@@ -66,19 +75,20 @@
           $("#" + id).addClass("card");
           $("." + localStorage.getItem("lastcard")).addClass("card");  
           $("." + localStorage.getItem("lastcard")+"-copy").addClass("card");
-          localStorage.setItem("lastcard", " "); 
-          }, 2000);
          
+          $(".card").on("click", clickedCard);
+          localStorage.setItem("lastcard", " "); 
+          console.log(localStorage.getItem("clicks"))
+          console.log(localStorage.getItem("lastcard"))
+
           
           
-            
+          }, 2000);
+        
           }
 
       }
-  });
-
-}); //end of ready function
-
+  }
 
 function countDownTimer() {
   
@@ -103,7 +113,7 @@ function resetTimer () {
 function generateRandomClass () {
   
   let cardclasses = ["bell","bell-copy","snowglobe","snowglobe-copy","toy","toy-copy","pinetree", "pinetree-copy"
-  ,"pinetree-snow","pinetree-snow-copy","present","present-copy","christmaspresent","christmaspresent-copy","giftbox", "giftbox-copy"];
+  ,"pinetreesnow","pinetreesnow-copy","present","present-copy","christmaspresent","christmaspresent-copy","giftbox", "giftbox-copy"];
   let idchooser = 1;
   let copyofcardclasses = cardclasses.slice();
   let numberofcards = 16;

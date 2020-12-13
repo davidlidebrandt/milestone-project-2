@@ -1,4 +1,4 @@
- localStorage.setItem("time", "20");
+ localStorage.setItem("time", "40");
  localStorage.setItem("clicks", "0");
  localStorage.setItem("gamefinished", "8");
 
@@ -11,14 +11,15 @@
       $("#sound audio source").attr("src", "assets/sounds/ticking.mp3");
 
   }
-//placeholder method for restarting the timer
-  $("#timer").click(function(){
-     clearInterval(timerreturn);
-     countDownTimer();
-     
-  });
+
 // game logic goes here: actions when cards are clicked
   $(".card").on("click", clickedCard);
+
+  $("#nav-btn-two").click(function() {
+  generateNewGame();
+  $(".game-over-modal").hide();
+  });
+
 
 }); //end of ready function
 
@@ -54,11 +55,17 @@ function clickedCard(){
           let findmatch = currentclass[0];
           console.log(findmatch);
           console.log(localStorage.getItem("lastcard"));
+          
           // executed if match is found
           if(findmatch == localStorage.getItem("lastcard")) {
           let currentvalue = parseInt(localStorage.getItem("gamefinished"));
           currentvalue--;
-          localStorage.setItem("gamefinished", currentvalue.toString);
+          console.log(currentvalue + " pairs of cards left");
+          if(currentvalue == 0){
+          $(".game-over-modal").show();
+          }
+          localStorage.setItem("gamefinished", currentvalue);
+          console.log(localStorage.getItem("gamefinished"));
           resetTimer();
           localStorage.setItem("lastcard", " ");
           console.log(localStorage.getItem("clicks"));
@@ -135,6 +142,14 @@ function addGeneralClass () {
     for(let i = 1; i <= initalclasses; i++) {
         $("#" + i).addClass("card");
     }
+}
+
+function generateNewGame () {
+ localStorage.setItem("time", "40");
+ localStorage.setItem("clicks", "0");
+ localStorage.setItem("gamefinished", "8");
+ generateRandomClass();
+ addGeneralClass();
 }
 
 generateRandomClass();

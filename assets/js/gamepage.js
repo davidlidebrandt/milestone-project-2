@@ -5,6 +5,7 @@
  localStorage.setItem("points", "100");
 
  let timerreturn;
+ let blocktime;
 
  if(sessionStorage.getItem("sound")=="on") {
       $("#sound").html("<audio autoplay loop><source></source></audio>");
@@ -21,6 +22,7 @@
   removeOldClasses();
   generateNewGame();
   $(".game-over-modal").hide();
+  $(".game-finished-modal").hide();
   });
 
 }); //end of ready function
@@ -69,6 +71,8 @@ function clickedCard(){
           console.log(currentvalue + " pairs of cards left");
           if(currentvalue == 0){
           $(".game-finished-modal").show();
+          addFinalScore();
+          blockTimer();
           }
           localStorage.setItem("pairsleft", currentvalue);
           console.log(localStorage.getItem("pairsleft"));
@@ -167,15 +171,26 @@ function generateNewGame () {
  localStorage.setItem("points", "100");
  generateRandomClass();
  addGeneralClass();
+ clearInterval(blocktime);
  resetTimer();
  $("#timer").show();
+}
+
+function addFinalScore () {
+    $(".game-finished-modal>h5").html("You finished the game with " + localStorage.getItem("points") + "points");
+}
+
+function blockTimer() {
+    blocktime = setInterval(function(){
+    resetTimer();
+    }, 1000)
 }
 
 function sendMail(form) {
      console.log("send mail")
      emailjs.send('service_ek6w4ip', 'template_fxoyyj6', {
        user_email: form.email.value,
-       score: score,
+       score: localStorage.getItem("points")
    })
     .then(function(response) {
        alert("You succesfully sent your score" + response);

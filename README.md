@@ -58,6 +58,8 @@ pairs of cards, it tests and trains your memory but also your speed since you on
 
 * CSS
 
+* JavaScript
+
 * [Bootstrap](https://getbootstrap.com/)
 
 
@@ -86,16 +88,35 @@ Adobe XD was used to create the wireframes and mockups for the project
 
 All of the testing in the project was done manually, the main way of doing so was to use the console log and printing
 out corresponding values during certain parts of the execution of the code. A lot of testing was also done by just
-trying out the different functions the way they were intended and seeing if they worked correctly.
+trying out the different functions and seeing if they worked correctly. By clicking the cards in different orders
+many bugs and errors in the logic were found which helped a lot.
 
 ### A list of tests that where done
 
 * When the sound setting button was pressed a console log message was being printed with the corresponding sound 
-setting value to make sure it turned off and on as intended, which it did.
+setting value to make sure it turned off and on as intended.
 
-* The function which generates a random class to the cards was tested in the development by adding placeholder
+* The generateRandomClass function which generates a random class to the cards was tested in the development by adding placeholder
 values to the array which would hold these class names and using the console.log function to print them to the screen.
-This function worked well from the start and no issues were found.
+
+* Both the addScores and printScores function that adds and prints the highscore values were tested by using the console.log function and printing
+out the values as they were extracted and stored. The addScores function was tested to work as intened by calling it
+with different numbers to make sure it only stored a number that was bigger then the current numbers that were stored.
+
+* The localStorage "clicks" value which keeps track of how many cards are flipped at the same time were tested by
+printing a console.log message with that value.
+
+* To find matches of cards the classes of the first cards that was flipped was being stored and then the individual
+class were extracted. This was done in multiple steps and after every step a console.log message was printed with the
+value of the variable in the current step to make sure it stored the correct value.
+
+* As the cards are flipped the .card class are removed, to make sure this worked as intented the this.className
+property was printed with the console.log function.
+
+* To check if the game is finished the localStorage "pairsleft" value was being decremented checked each time a pair was found.
+To make sure it decremented the value correctly a console.log message was being printed with the value.
+
+
 
 ### Bugs
 

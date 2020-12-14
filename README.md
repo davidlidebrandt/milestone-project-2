@@ -17,10 +17,11 @@ pairs of cards, it tests and trains your memory but also your speed since you on
 
 
 
-[Link to the deployed project]()
+[Link to the deployed project](https://davidlidebrandt.github.io/milestone-project-2/)
 
 ## UX
 
+The "Nerko" font was uses throughout the project to give the site a game-like look. 
 
 
 ### User Stories

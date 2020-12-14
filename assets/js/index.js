@@ -105,7 +105,7 @@ function printScore() {
     numArray = numArray.reverse();
     
     for(let i = 1, j=0; i <= numArray.length; i++, j++) {
-        $("#score"+i).html(numArray[j]);
+        $("#score"+i).html(numArray[j] + " points");
     }
 }
 

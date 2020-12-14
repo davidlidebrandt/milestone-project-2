@@ -25,6 +25,15 @@ pairs of cards, it tests and trains your memory but also your speed since you on
 
 ### User Stories
 
+* As a user I want clear instructions how to play the game.
+
+* As a user I want clear and intuative ways of navigating the site.
+
+* As a user I want any entering of personal details to be fully optional.
+
+* As a user I want to decide if any sound is going to be played.
+
+* As a user I want both a fun and challenging experience.
 
 
 
@@ -135,6 +144,17 @@ which basically makes a typedArray copy of the array which then can be sorted us
 
 ## Deployment
 
+The project was deployed on Github Pages on https://github.com/, the following steps were taken:
+1. Went to https://github.com/.
+2. Chose the right repsitory on the left side of the page.
+3. Clicked on the settings icon.
+4. Scrolled down to the Github Pages section.
+5. Chose the master branch as source and pressed save.
+6. Found the link to the deployed project in the Github Pages section after a few minutes.
+
+
+[Link to the repository](https://github.com/davidlidebrandt/milestone-project-2) <br><br>
+[Link to the deployed project](https://davidlidebrandt.github.io/milestone-project-2/)
 
 
 ## Credits 

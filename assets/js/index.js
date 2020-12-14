@@ -1,10 +1,4 @@
-let score = 100;
 
-localStorage.setItem("score1","0")
-localStorage.setItem("score2","0")
-localStorage.setItem("score3","0")
-localStorage.setItem("score4","0")
-localStorage.setItem("score5","0")
 
 sessionStorage.setItem("sound", "off");
 
@@ -115,5 +109,5 @@ function printScore() {
     }
 }
 
-addScores(10000);
+printScore();
 

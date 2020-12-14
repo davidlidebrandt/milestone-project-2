@@ -166,7 +166,7 @@ body {
 
 }
 
-#nav-btn-one {
+.nav-btn-home {
     position: absolute;
     background-color: #F4FAEF;
     border: none;
@@ -175,7 +175,7 @@ body {
 }
 
 
-#nav-btn-two {
+.nav-btn-newgame {
     position: absolute;
     background-color: #F4FAEF;
     border: none;

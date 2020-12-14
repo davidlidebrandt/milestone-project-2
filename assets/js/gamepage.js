@@ -1,31 +1,37 @@
  localStorage.setItem("time", "40");
  localStorage.setItem("clicks", "0");
- localStorage.setItem("gamefinished", "8");
+ localStorage.setItem("pairsleft", "8");
+ localStorage.setItem("lastcard", " ");
+ localStorage.setItem("points", "100");
 
  let timerreturn;
- 
- $(document).ready(function() {
- 
+
  if(sessionStorage.getItem("sound")=="on") {
       $("#sound").html("<audio autoplay loop><source></source></audio>");
       $("#sound audio source").attr("src", "assets/sounds/ticking.mp3");
-
   }
 
-// game logic goes here: actions when cards are clicked
+  generateNewGame();
+
+ $(document).ready(function() {
+ 
   $(".card").on("click", clickedCard);
 
-  $("#nav-btn-two").click(function() {
+  $(".nav-btn-newgame").click(function() {
+  removeOldClasses();
   generateNewGame();
   $(".game-over-modal").hide();
   });
 
-
 }); //end of ready function
 
 function clickedCard(){
+      let points = parseInt(localStorage.getItem("points"));
+      points--;
+      localStorage.setItem("points", points);
       let id = this.id;
       $(this).off();
+      
       //executed if no other card is flipped
       if(localStorage.getItem("clicks")=="0") {
           console.log(localStorage.getItem("clicks"))
@@ -58,14 +64,14 @@ function clickedCard(){
           
           // executed if match is found
           if(findmatch == localStorage.getItem("lastcard")) {
-          let currentvalue = parseInt(localStorage.getItem("gamefinished"));
+          let currentvalue = parseInt(localStorage.getItem("pairsleft"));
           currentvalue--;
           console.log(currentvalue + " pairs of cards left");
           if(currentvalue == 0){
-          $(".game-over-modal").show();
+          $(".game-finished-modal").show();
           }
-          localStorage.setItem("gamefinished", currentvalue);
-          console.log(localStorage.getItem("gamefinished"));
+          localStorage.setItem("pairsleft", currentvalue);
+          console.log(localStorage.getItem("pairsleft"));
           resetTimer();
           localStorage.setItem("lastcard", " ");
           console.log(localStorage.getItem("clicks"));
@@ -103,11 +109,13 @@ function countDownTimer() {
   $("#timer").removeClass("red-timer");
 
   time = localStorage.getItem("time");
+
+  
   
   timerreturn = setInterval(function(){$("#timer").html(time + " SECONDS LEFT"); time--;  
   if(time < 12) {$("#timer").addClass("yellow-timer"); }
   if(time < 6) {$("#timer").addClass("red-timer"); }
-  if(time < 0) {$("#timer").hide(); }
+  if(time < 0) {$("#timer").hide(); $(".game-over-modal").show(); }
   }, 1000);
  
 };
@@ -144,17 +152,37 @@ function addGeneralClass () {
     }
 }
 
+function removeOldClasses () {
+    let initalclasses = 16;
+    for(let i = 1; i <= initalclasses; i++) {
+        $("#" + i).removeClass();
+    }
+}
+
 function generateNewGame () {
  localStorage.setItem("time", "40");
  localStorage.setItem("clicks", "0");
- localStorage.setItem("gamefinished", "8");
+ localStorage.setItem("pairsleft", "8");
+ localStorage.setItem("lastcard", " ");
+ localStorage.setItem("points", "100");
  generateRandomClass();
  addGeneralClass();
+ resetTimer();
+ $("#timer").show();
 }
 
-generateRandomClass();
-
-addGeneralClass();
-
-countDownTimer();
+function sendMail(form) {
+     console.log("send mail")
+     emailjs.send('service_ek6w4ip', 'template_fxoyyj6', {
+       user_email: form.email.value,
+       score: score,
+   })
+    .then(function(response) {
+       alert("You succesfully sent your score" + response);
+    }, function(error) {
+       alert("An error occured" + error);
+    });
+    return false;
+  
+  };
 

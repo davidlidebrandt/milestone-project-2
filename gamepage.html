@@ -32,7 +32,7 @@
 <div class="col-3 no-pad"><div id="15"></div></div>
 <div class="col-3 no-pad"><div id="16"></div></div>
 
-<div class="base-modal game-over-modal">
+<div class="base-modal game-finished-modal">
 <h5 class="cus-h5">You finished the game with 100 points</h5>
 <div class="form-parent">
 <form id="email-form" onsubmit="return sendMail(this);">
@@ -42,8 +42,13 @@
 </form>
 </div>
 
-<button id="nav-btn-one">HOME</button>
-<button id="nav-btn-two">NEW GAME</button>
+<button class="nav-btn-home">HOME</button>
+<button class="nav-btn-newgame">NEW GAME</button>
+</div>
+<div class="base-modal game-over-modal">
+<h5 class="cus-h5">You lost the game, better luck next time</h5>
+<button class="nav-btn-home">HOME</button>
+<button class="nav-btn-newgame">NEW GAME</button>
 </div>
 
 </div></div>

@@ -57,20 +57,7 @@ $(document).ready(function() {
 
  
 
-function sendMail(form) {
-     console.log("send mail")
-     emailjs.send('service_ek6w4ip', 'template_fxoyyj6', {
-       user_email: form.email.value,
-       score: score,
-   })
-    .then(function(response) {
-       alert("You succesfully sent your score" + response);
-    }, function(error) {
-       alert("An error occured" + error);
-    });
-    return false;
-  
-  };
+
 
 
 
@@ -84,7 +71,7 @@ function addScores(score) {
     }
     temparray.shift();
     console.log(temparray);
-// This part was taken from an answer given by user "dy_" rergarding how to sort an array https://stackoverflow.com/questions/1063007/how-to-sort-an-array-of-integers-correctly
+// This part was taken from an answer given by user "dy_" rergarding how to sort an array with bigger numbers https://stackoverflow.com/questions/1063007/how-to-sort-an-array-of-integers-correctly
 let numArray = new Int32Array(temparray);
 numArray.sort();
 numArray.reverse();

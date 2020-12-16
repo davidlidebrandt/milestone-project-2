@@ -137,12 +137,15 @@ body {
 
 /*gamepage.html*/
 
+.restart-btn {
+    border: none;
+    background-color:#ECF9E6; 
+}
+
 .card-parent {
     margin-top: 40px;
     margin-bottom: 40px;
 }
-
-
 
 .menu {
     display: inline-block;

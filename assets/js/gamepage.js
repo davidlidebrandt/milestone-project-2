@@ -10,7 +10,8 @@
   generateNewGame();
 
  $(document).ready(function() {
-
+  $(".card").on("click", clickedCard);
+  
   $(".nav-btn-newgame").on("click", resetGame);
 
   $(".restart-btn").on("click", resetGame);
@@ -117,7 +118,6 @@ function addGeneralClass () {
     for(let i = 1; i <= initalclasses; i++) {
         $("#" + i).addClass("card");
     }
-    $(".card").off();
 }
 
 function removeOldClasses () {
@@ -138,7 +138,6 @@ function generateNewGame () {
  clearInterval(blocktime);
  resetTimer();
  $("#timer").show();
- $(".card").on("click", clickedCard);
 }
 
 function addFinalScore () {
@@ -218,4 +217,6 @@ function resetGame() {
   generateNewGame();
   $(".game-over-modal").hide();
   $(".game-finished-modal").hide();
+  $(".card").off();
+  $(".card").on("click", clickedCard);
 }

@@ -1,8 +1,3 @@
- localStorage.setItem("time", "40");
- localStorage.setItem("clicks", "0");
- localStorage.setItem("pairsleft", "8");
- localStorage.setItem("lastcard", " ");
- localStorage.setItem("points", "100");
 
  let timerreturn;
  let blocktime;
@@ -15,16 +10,10 @@
   generateNewGame();
 
  $(document).ready(function() {
- 
-  $(".card").on("click", clickedCard);
 
-  $(".nav-btn-newgame").click(function() {
-  removeOldClasses();
-  generateNewGame();
-  $(".game-over-modal").hide();
-  $(".game-finished-modal").hide();
-  $(".card").on("click", clickedCard);
-  });
+  $(".nav-btn-newgame").on("click", resetGame);
+
+  $(".restart-btn").on("click", resetGame);
 
 }); //end of ready function
 
@@ -118,7 +107,6 @@ function generateRandomClass () {
     $("#" + idchooser).addClass(currentclass);  
     $("#" + idchooser).addClass("card-flipped");  
     copyofcardclasses.splice(copyofcardclasses.indexOf(currentclass),1);
-    //console.log(currentclass);
     idchooser++;
     numberofcards --;
   }
@@ -129,6 +117,7 @@ function addGeneralClass () {
     for(let i = 1; i <= initalclasses; i++) {
         $("#" + i).addClass("card");
     }
+    $(".card").off();
 }
 
 function removeOldClasses () {
@@ -149,6 +138,7 @@ function generateNewGame () {
  clearInterval(blocktime);
  resetTimer();
  $("#timer").show();
+ $(".card").on("click", clickedCard);
 }
 
 function addFinalScore () {
@@ -223,3 +213,9 @@ function printScore() {
     }
 }
 
+function resetGame() {
+  removeOldClasses();
+  generateNewGame();
+  $(".game-over-modal").hide();
+  $(".game-finished-modal").hide();
+}

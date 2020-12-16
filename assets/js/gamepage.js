@@ -23,6 +23,7 @@
   generateNewGame();
   $(".game-over-modal").hide();
   $(".game-finished-modal").hide();
+  $(".card").on("click", clickedCard);
   });
 
 }); //end of ready function
@@ -36,13 +37,9 @@ function clickedCard(){
       
       //executed if no other card is flipped
       if(localStorage.getItem("clicks")=="0") {
-          console.log(localStorage.getItem("clicks"))
           localStorage.setItem("clicks", "1");
-          //console.log(this.className);
           let arrayofclasses = this.className.split(" ");
-          console.log(arrayofclasses);
           let accountforcopy = arrayofclasses[0].split("-");
-          console.log(accountforcopy[0]);
           localStorage.setItem("lastcard", accountforcopy[0]);
           $(this).removeClass("card");
           
@@ -51,24 +48,17 @@ function clickedCard(){
       }
       //executed if another card is already flipped
       else if(localStorage.getItem("clicks")=="1") {
-           $(".card").off();
-        console.log("inside else if statement")
-        console.log(localStorage.getItem("clicks"))
+          $(".card").off();
           $(this).removeClass("card");
-          console.log(this.className);
           localStorage.setItem("clicks", "0");
           let arrayofclasses2 = this.className.split(" ");
-          console.log(arrayofclasses2);
           let currentclass = arrayofclasses2[0].split("-");
           let findmatch = currentclass[0];
-          console.log(findmatch);
-          console.log(localStorage.getItem("lastcard"));
-          
+         
           // executed if match is found
           if(findmatch == localStorage.getItem("lastcard")) {
           let currentvalue = parseInt(localStorage.getItem("pairsleft"));
           currentvalue--;
-          console.log(currentvalue + " pairs of cards left");
           if(currentvalue == 0){
           $(".game-finished-modal").show();
           addFinalScore();
@@ -76,31 +66,18 @@ function clickedCard(){
           addScores(parseInt(localStorage.getItem("points")));
           }
           localStorage.setItem("pairsleft", currentvalue);
-          console.log(localStorage.getItem("pairsleft"));
           resetTimer();
           localStorage.setItem("lastcard", " ");
-          console.log(localStorage.getItem("clicks"));
-          console.log(localStorage.getItem("lastcard"));
            $(".card").on("click", clickedCard);
           }
           //executed if no match is found
           else {
-          console.log(this.className);
-          console.log(this.id);
-         
-          
           setTimeout(function() {
           $("#" + id).addClass("card");
           $("." + localStorage.getItem("lastcard")).addClass("card");  
           $("." + localStorage.getItem("lastcard")+"-copy").addClass("card");
-         
           $(".card").on("click", clickedCard);
           localStorage.setItem("lastcard", " "); 
-          console.log(localStorage.getItem("clicks"))
-          console.log(localStorage.getItem("lastcard"))
-
-          
-          
           }, 2000);
         
           }
@@ -115,8 +92,6 @@ function countDownTimer() {
 
   time = localStorage.getItem("time");
 
-  
-  
   timerreturn = setInterval(function(){$("#timer").html(time + " SECONDS LEFT"); time--;  
   if(time < 12) {$("#timer").addClass("yellow-timer"); }
   if(time < 6) {$("#timer").addClass("red-timer"); }
@@ -131,7 +106,6 @@ function resetTimer () {
 }
 
 function generateRandomClass () {
-  
   let cardclasses = ["bell","bell-copy","snowglobe","snowglobe-copy","toy","toy-copy","pinetree", "pinetree-copy"
   ,"pinetreesnow","pinetreesnow-copy","present","present-copy","christmaspresent","christmaspresent-copy","giftbox", "giftbox-copy"];
   let idchooser = 1;
@@ -207,17 +181,12 @@ function sendMail(form) {
 
     for(let i = 1; i<6; i++) {
         temparray[i] = localStorage.getItem("score" + i)
-        console.log(temparray[i]);
-
     }
     temparray.shift();
-    console.log(temparray);
 // This part was taken from an answer given by user "dy_" rergarding how to sort an array with bigger numbers https://stackoverflow.com/questions/1063007/how-to-sort-an-array-of-integers-correctly
 let numArray = new Int32Array(temparray);
 numArray.sort();
 numArray.reverse();
-console.log(numArray);
-console.log(numArray[0]);
 
 if(score > numArray[4]) {
     numArray[4] = score;
@@ -244,8 +213,6 @@ function printScore() {
         console.log(temparray[j]);
 
     }
-
-    
 
     let numArray = new Int32Array(temparray);
     numArray = numArray.sort();

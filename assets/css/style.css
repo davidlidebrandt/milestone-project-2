@@ -73,49 +73,44 @@ body {
     color: black;
 }
 
+.main-menu-btn:hover {
+    color: black;
+    text-decoration: underline;
+}
 
-.on-btn {
-    background-color: #71E2AD;
-    border: solid 1px grey;
+.on-btn, .off-btn {
+   border: solid 1px grey;
     border-radius: 5px;
     width: 40px;
     vertical-align: middle;
     margin-left: 20px;
     box-shadow: 0.5px 0.5px 0.5px grey;
+}
 
+.on-btn {
+    background-color: #71E2AD;
 }
 
 .off-btn {
     background-color: #F8C9C9;
-    border: solid 1px grey;
-    border-radius: 5px;
-    width: 40px;
-    vertical-align: middle;
-    margin-left: 20px;
-    box-shadow: 0.5px 0.5px 0.5px grey;
+}
+
+.circle-on, .circle-off {
+    border-radius: 50%;
+    background-color: black;
+    width: 15px;
+    height: 15px;
+    display: block;
+    padding-top: 0px;
+    padding-bottom: 0px;
 }
 
 .circle-on {
-    border-radius: 50%;
-    background-color: black;
-    width: 15px;
-    height: 15px;
-    display: block;
     float: right;
-    padding-top: 0px;
-    padding-bottom: 0px;
 }
 
-
 .circle-off {
-    border-radius: 50%;
-    background-color: black;
-    width: 15px;
-    height: 15px;
-    display: block;
     float: left;
-    padding-top: 0px;
-    padding-bottom: 0px;
 }
 
 .div-inline-block {
@@ -161,6 +156,11 @@ body {
     color: black;
 }
 
+.menu-itm:hover {
+    color: black;
+    text-decoration: underline;
+}
+
 #timer {
     margin: 0 auto;
     margin-top: 20px;
@@ -185,21 +185,26 @@ body {
 
 
 
-.nav-btn-home {
+.nav-btn-home:hover, .nav-btn-newgame:hover {
+    text-decoration: underline;
+    color: black;
+}
+
+.nav-btn-home, .nav-btn-newgame {
     position: absolute;
     background-color: #F4FAEF;
     border: none;
-    left: 10px;
     bottom: 20px;
+    color: black;
+}
+
+.nav-btn-home {
+    left: 10px;
 }
 
 
 .nav-btn-newgame {
-    position: absolute;
-    background-color: #F4FAEF;
-    border: none;
     right: 10px; 
-    bottom: 20px;  
 }
 
 .input-field {
@@ -317,7 +322,7 @@ body {
     background-position: center;
 }
 
-.card {
+.card, .card-copy {
     height: 120px;
     width: 80px;
     box-shadow: 1px 1px 1px grey;
@@ -327,21 +332,14 @@ body {
     margin-bottom: 15px;
     margin: 0 auto;
     margin-top: 20px;
-    background-image: url("../images/icons/calendar.png");
     background-size: 40px 40px;
 }
 
-.card-copy {
-    height: 120px;
-    width: 80px;
-    box-shadow: 1px 1px 1px grey;
-    border-radius: 8px;
-    border: solid 2px black;
-    background-color: #E5EFEE;
-    margin-bottom: 15px;
-    margin: 0 auto;
-    margin-top: 20px;
+.card {
     background-image: url("../images/icons/calendar.png");
-    background-size: 40px 40px;
+}
+
+.card-copy {
+    background-image: url("../images/icons/calendar.png");
 }
 

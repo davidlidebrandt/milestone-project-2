@@ -2,7 +2,7 @@
  let timerreturn;
  let blocktime;
 
- if(sessionStorage.getItem("sound")=="on") {
+ if(sessionStorage.getItem("sound")==="on") {
       $("#sound").html("<audio autoplay loop><source></source></audio>");
       $("#sound audio source").attr("src", "assets/sounds/ticking.mp3");
   }
@@ -26,18 +26,13 @@ function clickedCard(){
       $(this).off();
       
       //executed if no other card is flipped
-      if(localStorage.getItem("clicks")=="0") {
+      if(localStorage.getItem("clicks")==="0") {
           localStorage.setItem("clicks", "1");
           let arrayofclasses = this.className.split(" ");
           let accountforcopy = arrayofclasses[0].split("-");
           localStorage.setItem("lastcard", accountforcopy[0]);
           $(this).removeClass("card");
-          
-
-
-      }
-      //executed if another card is already flipped
-      else if(localStorage.getItem("clicks")=="1") {
+      } else if(localStorage.getItem("clicks")==="1") {  //executed if another card is already flipped
           $(".card").off();
           $(this).removeClass("card");
           localStorage.setItem("clicks", "0");
@@ -46,10 +41,10 @@ function clickedCard(){
           let findmatch = currentclass[0];
          
           // executed if match is found
-          if(findmatch == localStorage.getItem("lastcard")) {
+          if(findmatch === localStorage.getItem("lastcard")) {
           let currentvalue = parseInt(localStorage.getItem("pairsleft"));
           currentvalue--;
-          if(currentvalue == 0){
+          if(currentvalue === 0){
           $(".game-finished-modal").show();
           addFinalScore();
           blockTimer();
@@ -59,9 +54,7 @@ function clickedCard(){
           resetTimer();
           localStorage.setItem("lastcard", " ");
            $(".card").on("click", clickedCard);
-          }
-          //executed if no match is found
-          else {
+          } else { //executed if no match is found
           setTimeout(function() {
           $("#" + id).addClass("card");
           $("." + localStorage.getItem("lastcard")).addClass("card");  
@@ -69,9 +62,7 @@ function clickedCard(){
           $(".card").on("click", clickedCard);
           localStorage.setItem("lastcard", " "); 
           }, 2000);
-        
           }
-
       }
   }
 
@@ -85,7 +76,7 @@ function countDownTimer() {
   timerreturn = setInterval(function(){$("#timer").html(time + " SECONDS LEFT"); time--;  
   if(time < 12) {$("#timer").addClass("yellow-timer"); }
   if(time < 6) {$("#timer").addClass("red-timer"); }
-  if(time < 0) {$("#timer").hide(); $(".game-over-modal").show(); }
+  if(time <= 0) {$("#timer").hide(); $(".game-over-modal").show(); }
   }, 1000);
  
 };
@@ -101,7 +92,7 @@ function generateRandomClass () {
   let idchooser = 1;
   let copyofcardclasses = cardclasses.slice();
   let numberofcards = 16;
-  let initalclasses = 16;
+  const initalclasses = 16;
 
   for(let i = 0; i < initalclasses; i++) {
     let currentclass = copyofcardclasses[Math.floor(Math.random() * (numberofcards))];
@@ -121,7 +112,7 @@ function addGeneralClass () {
 }
 
 function removeOldClasses () {
-    let initalclasses = 16;
+    const initalclasses = 16;
     for(let i = 1; i <= initalclasses; i++) {
         $("#" + i).removeClass();
     }
@@ -141,7 +132,7 @@ function generateNewGame () {
 }
 
 function addFinalScore () {
-    $(".game-finished-modal>h5").html("You finished the game with " + localStorage.getItem("points") + "points");
+    $(".game-finished-modal>h5").html("You finished the game with " + localStorage.getItem("points") + " points");
 }
 
 function blockTimer() {
@@ -150,22 +141,20 @@ function blockTimer() {
     }, 1000)
 }
 
+// code from the the emailjs documentation
 function sendMail(form) {
      console.log("send mail")
-     emailjs.send('service_ek6w4ip', 'template_fxoyyj6', {
+     emailjs.send('default_service', 'template_fxoyyj6', {
        user_email: form.email.value,
        score: localStorage.getItem("points")
    })
     .then(function(response) {
-       alert("You succesfully sent your score" + response);
+       alert("You succesfully sent your score");
     }, function(error) {
-       alert("An error occured" + error);
+       alert("An error occured");
     });
     return false;
-  
   };
-
-
 
 function resetGame() {
   removeOldClasses();

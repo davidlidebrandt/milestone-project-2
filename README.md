@@ -96,7 +96,7 @@ Adobe XD was used to create the wireframes and mockups for the project
 
 ## Testing
 
-All of the testing in the project was done manually, the main way of doing so was to use the console log and printing
+All of the testing of the functions and features of the game was done manually, the main way of doing so was to use the console log and printing
 out corresponding values during certain parts of the execution of the code. A lot of testing was also done by just
 trying out the different functions and seeing if they worked correctly. By clicking the cards in different orders
 many bugs and errors in the logic were found which helped a lot.
@@ -138,6 +138,26 @@ the user returned home.
 Trying to sort the array that displays the different highscores did not work using array.sort() method since that 
 method only sorts the items by their first number. The was solved by using the answer from user "dy_" in this stackflow post https://stackoverflow.com/questions/1063007/how-to-sort-an-array-of-integers-correctly,
 which basically makes a typedArray copy of the array which then can be sorted using the arrays.sort() method.
+
+The general .card class is being removed and added to show the card. A bug that occured was that when adding back 
+the .card class when no match was found was that it was added as the last class of the element wich messed up
+the logic of the game. The soulution was to add the .card after the other classes in the CSS file, creating
+a function which added the class to the elements through a for loop after the other classes was added and then
+changing the logic to fit these new conditons.
+
+When trying to "flip" back the card after no match was found the this keyword did not work and the .card class
+was not being added back to that element. Still not really sure why but the soulution was to extract the id 
+of the element and then using that to add back the .card class.
+
+After the game was finished successfully the timer still counted down and when the time had ran out the modal
+for a lost game popped up. The soulution to this was to add a function that resets the timer on certain intervals
+and then stopping the execution of that function whenever a new game was started.
+
+
+
+
+
+
 
 
 ## User Stories

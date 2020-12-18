@@ -1,6 +1,7 @@
 
- let timerreturn;
- let blocktime;
+ let counterTime;
+ let blockTime;
+ let resetCard;
 
  if(sessionStorage.getItem("sound")==="on") {
       $("#sound").html("<audio autoplay loop><source></source></audio>");
@@ -15,6 +16,18 @@
   $(".nav-btn-newgame").on("click", resetGame);
 
   $(".restart-btn").on("click", resetGame);
+
+   function resetGame() {
+    clearInterval(resetCard);
+    $(".card").off();
+    removeOldClasses();
+    generateNewGame();
+    $(".game-over-modal").hide();
+    $(".game-finished-modal").hide();
+    $(".card").on("click", clickedCard);
+    
+}
+
 
 }); //end of ready function
 
@@ -55,7 +68,7 @@ function clickedCard(){
           localStorage.setItem("lastcard", " ");
            $(".card").on("click", clickedCard);
           } else { //executed if no match is found
-          setTimeout(function() {
+          resetCard = setTimeout(function() {
           $("#" + id).addClass("card");
           $("." + localStorage.getItem("lastcard")).addClass("card");  
           $("." + localStorage.getItem("lastcard")+"-copy").addClass("card");
@@ -73,7 +86,7 @@ function countDownTimer() {
 
   time = localStorage.getItem("time");
 
-  timerreturn = setInterval(function(){$("#timer").html(time + " SECONDS LEFT"); time--;  
+  counterTime = setInterval(function(){$("#timer").html(time + " SECONDS LEFT"); time--;  
   if(time < 12) {$("#timer").addClass("yellow-timer"); }
   if(time < 6) {$("#timer").addClass("red-timer"); }
   if(time <= 0) {$("#timer").hide(); $(".game-over-modal").show(); }
@@ -82,7 +95,7 @@ function countDownTimer() {
 };
 
 function resetTimer () {
-    clearInterval(timerreturn);
+    clearInterval(counterTime);
     countDownTimer();
 }
 
@@ -105,7 +118,7 @@ function generateRandomClass () {
 }
 
 function addGeneralClass () {
-    let initalclasses = 16;
+    const initalclasses = 16;
     for(let i = 1; i <= initalclasses; i++) {
         $("#" + i).addClass("card");
     }
@@ -126,7 +139,7 @@ function generateNewGame () {
  localStorage.setItem("points", "100");
  generateRandomClass();
  addGeneralClass();
- clearInterval(blocktime);
+ clearInterval (blockTime);
  resetTimer();
  $("#timer").show();
 }
@@ -136,10 +149,12 @@ function addFinalScore () {
 }
 
 function blockTimer() {
-    blocktime = setInterval(function(){
+ blockTime = setInterval(function(){
     resetTimer();
     }, 1000)
 }
+
+
 
 // code from the the emailjs documentation
 function sendMail(form) {
@@ -156,11 +171,4 @@ function sendMail(form) {
     return false;
   };
 
-function resetGame() {
-  removeOldClasses();
-  generateNewGame();
-  $(".game-over-modal").hide();
-  $(".game-finished-modal").hide();
-  $(".card").off();
-  $(".card").on("click", clickedCard);
-}
+

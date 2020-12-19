@@ -3,10 +3,7 @@
  let blockTime;
  let resetCard;
 
- if(sessionStorage.getItem("sound")==="on") {
-      $("#sound").html("<audio autoplay loop><source></source></audio>");
-      $("#sound audio source").attr("src", "assets/sounds/ticking.mp3");
-  }
+ 
 
   generateNewGame();
 
@@ -32,6 +29,10 @@
 }); //end of ready function
 
 function clickedCard(){
+      if(sessionStorage.getItem("sound")==="on") {
+      $("#click-sound").html("<audio autoplay><source></source></audio>");
+      $("#click-sound audio source").attr("src", "assets/sounds/clicking.mp3");}
+      
       let points = parseInt(localStorage.getItem("points"));
       points--;
       localStorage.setItem("points", points);
@@ -84,7 +85,7 @@ function countDownTimer() {
   $("#timer").removeClass("yellow-timer");
   $("#timer").removeClass("red-timer");
 
-  time = localStorage.getItem("time");
+  time = sessionStorage.getItem("time");
 
   counterTime = setInterval(function(){$("#timer").html(time + " SECONDS LEFT"); time--;  
   if(time < 12) {$("#timer").addClass("yellow-timer"); }
@@ -132,8 +133,8 @@ function removeOldClasses () {
 }
 
 function generateNewGame () {
- let setLevel = localStorage.getItem("level");
- setLevel === null ? localStorage.setItem("time", "40") : localStorage.setItem("time", setLevel)
+ let setLevel = sessionStorage.getItem("level");
+ setLevel === null ? sessionStorage.setItem("time", "40") : sessionStorage.setItem("time", setLevel)
  localStorage.setItem("clicks", "0");
  localStorage.setItem("pairsleft", "8");
  localStorage.setItem("lastcard", " ");

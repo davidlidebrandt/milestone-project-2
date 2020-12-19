@@ -41,7 +41,7 @@ function printScore() {
     
     for(let i = 1, j=0; i <= numArray.length; i++, j++) {
         if(!(numArray[j] === 0))
-        $("#score"+i).html(numArray[j]);
+        $("#score"+i).html(numArray[j] + " points");
     }
 }
 

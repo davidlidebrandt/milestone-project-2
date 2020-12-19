@@ -27,13 +27,24 @@ body {
     background-color: #F4FAEF;
     text-align: center;
     width: 40%;
-    height: 30%;
+    height: 60%;
     left: 30%;
     right: 30%;
     top: 10%;
 }
+button:focus {
+   outline: none;
+}
 
 /*index.html*/
+.window-parent {
+    width: 100%;
+    min-height: 500px;
+    background-image: url("../images/icons/candle.png");
+    opacity: 0.8;
+    background-size: auto;
+}
+
 .nav-window {
     width: 50%;
     height: 70%;
@@ -49,6 +60,11 @@ body {
 .window-item {
     margin-bottom: 15px;
     letter-spacing: 1.3px;
+}
+
+.hs-col {
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 .actions {
@@ -70,20 +86,24 @@ body {
     background-color: #ECF9E6;
     padding-left: 6px;
     padding-right: 6px;
+    padding-top: 6px;
+    padding-bottom: 6px;
     box-shadow: 0.5px 0.5px 0.5px grey;
     display: inline;
     color: black;
 }
 
+
 .main-menu-btn:hover {
     color: black;
-    text-decoration: underline;
+    background-color: #545b62;
+    text-decoration: none;
 }
 
 .on-btn, .off-btn {
    border: solid 1px grey;
     border-radius: 5px;
-    width: 40px;
+    width: 20px;
     vertical-align: middle;
     margin-left: 20px;
     box-shadow: 0.5px 0.5px 0.5px grey;
@@ -105,6 +125,8 @@ body {
     display: block;
     padding-top: 0px;
     padding-bottom: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
 .circle-on {
@@ -117,6 +139,7 @@ body {
 
 .list-hs {
     border: solid black 1px;
+    padding: 2px;
 }
 
 .list-hs-parent {
@@ -124,7 +147,13 @@ body {
 }
 
 #sound-btn {
-    width: 50px;
+    width: 40px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+#sound {
+    padding-left: 6px;
 }
 
 /*gamepage.html*/

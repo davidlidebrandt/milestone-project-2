@@ -4,28 +4,28 @@ sessionStorage.setItem("sound", "off");
 $(document).ready(function() {
 
   $("#btn-easy").click(function(){
-  localStorage.setItem("level", "60");
+  sessionStorage.setItem("level", "60"); 
   });  
 
    $("#btn-medium").click(function(){
-  localStorage.setItem("level", "40");
+  sessionStorage.setItem("level", "40");
   });  
 
    $("#btn-hard").click(function(){
-  localStorage.setItem("level", "20");
+  sessionStorage.setItem("level", "20");
   });  
 
   $("#high-scores").click(function () {
-     $(".hs-modal").show(500);
+     $(".hs-modal").show(300);
   }); 
 
    $("#how-to").click(function () {
-     $(".ht-modal").show(500);
+     $(".ht-modal").show(300);
   }); 
 
   $(".close-btn").click(function(){
-    $(".hs-modal").hide(500);
-    $(".ht-modal").hide(500);
+    $(".hs-modal").hide(300);
+    $(".ht-modal").hide(300);
   });
 
   $("#sound-btn").click(function() {

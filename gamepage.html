@@ -14,6 +14,7 @@
 </head>
 <body>
 <header><div class="menu"><a class="menu-itm" href="index.html"><span>HOME</span></a><button class="restart-btn"><span class="menu-itm">RESTART GAME</span></button></div></header>
+<!--container,row and col classes from bootstrap--> 
 <div class="container">
 <div class="row">
 <div class="col-3 no-pad"><div id="1"></div></div>
@@ -35,6 +36,7 @@
 
 <div class="base-modal game-finished-modal">
 <h5 class="cus-h5"></h5>
+<div id="smiley"></div>
 <div class="form-parent">
 <form id="email-form" onsubmit="return sendMail(this);">
   <label for="email">Enter Your Email Below To Recieve An Email With Your Score:</label><br>
@@ -48,12 +50,12 @@
 </div>
 <div class="base-modal game-over-modal">
 <h5 class="cus-h5">You lost the game, better luck next time</h5>
-<button> <a class="nav-btn-home" href="index.html">HOME</a></button>
+<div id="sad-smiley"></div>
+<a class="nav-btn-home" href="index.html">HOME</a>
 <button class="nav-btn-newgame">NEW GAME</button>
 </div>
 
 </div></div>
-<div id="sound"></div>
 <div id="click-sound"></div>
 <div id="timer" class="green-timer"></div>
 <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>

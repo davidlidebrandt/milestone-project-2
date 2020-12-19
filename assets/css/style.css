@@ -29,7 +29,20 @@ body {
     width: 40%;
     left: 30%;
     right: 30%;
+    top: 5%;
+    bottom: 5%;
 }
+
+.modal-h5 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.close-btn-wrap {
+    position: absolute;
+    bottom: 20px;
+}
+
 button:focus {
    outline: none;
 }
@@ -390,6 +403,13 @@ button:focus {
 }
 
 /*media queries*/
+
+@media only screen and (max-width: 600px) {
+    .card, .card-copy, .card-flipped {
+        height: 100px;
+        width: 60px;
+    }
+}
 
 @media only screen and (max-width: 600px) {
     .nav-window {

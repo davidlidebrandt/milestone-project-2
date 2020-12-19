@@ -29,8 +29,9 @@ printScore();
 function printScore() {
     
     let tempArray = [];
+    let numberOfScores = 5;
 
-    for(let i = 1, j =0; i<6; i++, j++) {
+    for(let i = 1, j =0; i<=numberOfScores; i++, j++) {
         tempArray[j] = localStorage.getItem("score" + i)
     }
 

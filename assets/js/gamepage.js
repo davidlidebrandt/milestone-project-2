@@ -132,7 +132,8 @@ function removeOldClasses () {
 }
 
 function generateNewGame () {
- localStorage.setItem("time", "40");
+ let setLevel = localStorage.getItem("level");
+ setLevel === null ? localStorage.setItem("time", "40") : localStorage.setItem("time", setLevel)
  localStorage.setItem("clicks", "0");
  localStorage.setItem("pairsleft", "8");
  localStorage.setItem("lastcard", " ");

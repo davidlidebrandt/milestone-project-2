@@ -3,6 +3,18 @@ sessionStorage.setItem("sound", "off");
 
 $(document).ready(function() {
 
+  $("#btn-easy").click(function(){
+  localStorage.setItem("level", "60");
+  });  
+
+   $("#btn-medium").click(function(){
+  localStorage.setItem("level", "40");
+  });  
+
+   $("#btn-hard").click(function(){
+  localStorage.setItem("level", "20");
+  });  
+
   $("#high-scores").click(function () {
      $(".hs-modal").show(500);
   }); 

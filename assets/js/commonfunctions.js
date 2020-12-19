@@ -1,12 +1,12 @@
 function addScores(score) {
-    let temparray = [];
+    let tempArray = [];
 
     for(let i = 1; i<6; i++) {
-        temparray[i] = localStorage.getItem("score" + i)
+        tempArray[i] = localStorage.getItem("score" + i)
     }
-    temparray.shift();
+    tempArray.shift();
 // This part was taken from an answer given by user "dy_" rergarding how to sort an array with bigger numbers https://stackoverflow.com/questions/1063007/how-to-sort-an-array-of-integers-correctly
-let numArray = new Int32Array(temparray);
+let numArray = new Int32Array(tempArray);
 numArray.sort();
 numArray.reverse();
 
@@ -28,17 +28,18 @@ printScore();
 
 function printScore() {
     
-    let temparray = [];
+    let tempArray = [];
 
     for(let i = 1, j =0; i<6; i++, j++) {
-        temparray[j] = localStorage.getItem("score" + i)
+        tempArray[j] = localStorage.getItem("score" + i)
     }
 
-    let numArray = new Int32Array(temparray);
+    let numArray = new Int32Array(tempArray);
     numArray = numArray.sort();
     numArray = numArray.reverse();
     
     for(let i = 1, j=0; i <= numArray.length; i++, j++) {
+        if(!(numArray[j] === 0))
         $("#score"+i).html(numArray[j]);
     }
 }

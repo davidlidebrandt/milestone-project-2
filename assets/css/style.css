@@ -19,16 +19,18 @@ body {
 
 .base-modal {
     display: none;
-    width: 60%;
     border: solid 1px black;
     position: absolute;
     border-radius: 10px;
     box-shadow: 1px 1px 1px grey;
     z-index: 100;
     background-color: #F4FAEF;
-    left: 20%;
-    top: 20%;
     text-align: center;
+    width: 40%;
+    height: 30%;
+    left: 30%;
+    right: 30%;
+    top: 10%;
 }
 
 /*index.html*/
@@ -113,13 +115,8 @@ body {
     float: left;
 }
 
-.div-inline-block {
-    display: inline;
-}
-
 .list-hs {
     border: solid black 1px;
-    margin-right: 20px;
 }
 
 .list-hs-parent {

@@ -12,7 +12,8 @@ $(document).ready(function() {
   }); 
 
   $(".close-btn").click(function(){
-    $(this).parent().hide(500);
+    $(".hs-modal").hide(500);
+    $(".ht-modal").hide(500);
   });
 
   $("#sound-btn").click(function() {

@@ -287,6 +287,22 @@ button:focus {
     margin-top: 20px;
 }
 
+/*footer*/
+
+.cus-footer {
+    background-color: #E5EFEE;
+    text-align: center;
+}
+
+.cus-footer p {
+    font-size: 50%;
+    margin-top: 8px;
+}
+
+.cus-footer a {
+    color: black;
+}
+
 /*card classes*/
 .bell {
     background-image: url("../images/icons/bell.png");

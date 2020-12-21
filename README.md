@@ -21,7 +21,17 @@ pairs of cards, it tests and trains your memory but also your speed since you on
 
 ## UX
 
-The "Nerko" font was uses throughout the project to give the site a game-like look. 
+The "Nerko One" font was uses throughout the project to give the site a game-like look. The icons were chosen
+based on the time of the year and hoped to give the user some extra entertainment. The colors were chosen to give
+the game som liveliness without being too intrusive.
+
+The developer's goal is to showcase a wide variety of software development skills. By using both custom HTML, CSS 
+and JavaScript, as well as libraries as JQuery and Bootstrap the developer wish to show proficiency in both writing
+own code and taking advantage of ready to go components and functions. The project involves writing logic for the game
+,working with the Web Storage API, the EmailJS service as well as the Firebase firestore database. All intended to showcase
+a wide base of software skills. The focus of the project is interactivity which it accives in many ways by allowing
+the player to chose sound and level settings, playing the game, opening and closing modals, staring and restarting
+the game and filing out forms.
 
 
 ### User Stories
@@ -39,9 +49,6 @@ The "Nerko" font was uses throughout the project to give the site a game-like lo
 
 
 #### Wireframes and Mockups
-
-
-
 
 * [Wireframe Mobile](assets/images/wireframes-mockups/wireframe-mobile.png)
 * [Wireframe Tablet](assets/images/wireframes-mockups/wireframe-tablet.png)
@@ -66,32 +73,49 @@ The "Nerko" font was uses throughout the project to give the site a game-like lo
 
 * HTML
 
+For the basic structure of the web page.
+
 * CSS
+
+For the styling of the HTML elements.
 
 * JavaScript
 
+To add interactivity to the project.
+
+* JQuery
+
+JQuery functions where uses to manipulate the DOM and taking actions.
+
 * [Bootstrap](https://getbootstrap.com/)
 
+Bootstrap was mainly used to provide structure to the page and its elements. A ready to go dropdown menu was also
+used in the main navigation window on the index page.
 
 * [Google Fonts](https://fonts.google.com/)
 
-Google fonts was used to import the "Nerko" font which was used throughout the project.
+Google fonts was used to import the "Nerko One" font which was used throughout the project.
 
 * [Github](https://github.com/)
 
-Github was used to store the repository and to deploy the project
+Github was used to store the repository and to deploy the project.
 
 * [Gitpod](https://www.gitpod.io/)
 
-Gitpod was the IDE used to create the project
+Gitpod was the IDE used to create the project.
 
 * [Git](https://git-scm.com/) 
 
-For version control through the gitpod terminal
+For version control through the gitpod terminal.
 
 * [Adobe XD](https://www.adobe.com/products/xd.html)
 
-Adobe XD was used to create the wireframes and mockups for the project
+Adobe XD was used to create the wireframes and mockups for the project.
+
+* [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools)
+
+Chrome DevTools was heavily uses throughout the project,  mainly by debugging and testing with help of the console and
+checking the responsivness of the page with their screen rendering tools.
 
 
 ## Testing
@@ -101,7 +125,7 @@ out corresponding values during certain parts of the execution of the code. A lo
 trying out the different functions and seeing if they worked correctly. By clicking the cards in different orders
 many bugs and errors in the logic were found which helped a lot.
 
-### A list of tests that where done
+### A list of tests that were done
 
 * When the sound setting button was pressed a console log message was being printed with the corresponding sound 
 setting value to make sure it turned off and on as intended.
@@ -125,6 +149,19 @@ property was printed with the console.log function.
 
 * To check if the game is finished the localStorage "pairsleft" value was being decremented checked each time a pair was found.
 To make sure it decremented the value correctly a console.log message was being printed with the value.
+
+* The sound setting was tested by pressing the button and starting the game, both values were tested multiple times
+by going nack and forth and changing the order of on and off states. No issues were found.
+
+* The modals in the main window were tested by opening and closing them multiple times, all worked fine.
+
+* The highscores feature was tested to work properly by playing the game and scoring different scores and checking 
+that only the highest values were being printed. No problems found, only the right scores are being printed.
+
+* The leader board feature was being tested by adding scores to the database and checking to see which values were
+being printed. No issues found, the right values were printed and only five users were shown which was the
+intention.
+
 
 
 
@@ -152,11 +189,6 @@ of the element and then using that to add back the .card class.
 After the game was finished successfully the timer still counted down and when the time had ran out the modal
 for a lost game popped up. The soulution to this was to add a function that resets the timer on certain intervals
 and then stopping the execution of that function whenever a new game was started.
-
-
-
-
-
 
 
 

@@ -70,9 +70,9 @@ function clickedCard(){
            $(".card").on("click", clickedCard);
           } else { //executed if no match is found
           resetCard = setTimeout(function() {
-          $("#" + id).addClass("card");
-          $("." + localStorage.getItem("lastcard")).addClass("card");  
-          $("." + localStorage.getItem("lastcard")+"-copy").addClass("card");
+          $(`#${id}`).addClass("card");
+          $(`.${localStorage.getItem("lastcard")}`).addClass("card");  
+          $(`.${localStorage.getItem("lastcard")}-copy`).addClass("card");
           $(".card").on("click", clickedCard);
           localStorage.setItem("lastcard", " "); 
           }, 2000);
@@ -110,8 +110,8 @@ function generateRandomClass () {
 
   for(let i = 0; i < initalclasses; i++) {
     let currentclass = copyofcardclasses[Math.floor(Math.random() * (numberofcards))];
-    $("#" + idchooser).addClass(currentclass);  
-    $("#" + idchooser).addClass("card-flipped");  
+    $(`#${idchooser}`).addClass(currentclass);  
+    $(`#${idchooser}`).addClass("card-flipped");  
     copyofcardclasses.splice(copyofcardclasses.indexOf(currentclass),1);
     idchooser++;
     numberofcards --;
@@ -121,14 +121,14 @@ function generateRandomClass () {
 function addGeneralClass () {
     const initalclasses = 16;
     for(let i = 1; i <= initalclasses; i++) {
-        $("#" + i).addClass("card");
+        $(`#${i}`).addClass("card");
     }
 }
 
 function removeOldClasses () {
     const initalclasses = 16;
     for(let i = 1; i <= initalclasses; i++) {
-        $("#" + i).removeClass();
+        $(`#${i}`).removeClass();
     }
 }
 
@@ -147,7 +147,7 @@ function generateNewGame () {
 }
 
 function addFinalScore () {
-    $(".game-finished-modal>h5").html("You finished the game with " + localStorage.getItem("points") + " points");
+    $(".game-finished-modal>h5").html(`You finished the game with ${localStorage.getItem("points")} points`);
 }
 
 function blockTimer() {

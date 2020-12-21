@@ -16,16 +16,23 @@ $(document).ready(function() {
   });  
 
   $("#high-scores").click(function () {
-     $(".hs-modal").show(300);
+    printScore();
+    $(".hs-modal").show(300);
   }); 
 
-   $("#how-to").click(function () {
+  $("#leader-board").click(function () {
+    getAndPrintUsers();
+    $(".lb-modal").show(300);
+  }); 
+
+  $("#how-to").click(function () {
      $(".ht-modal").show(300);
   }); 
 
   $(".close-btn").click(function(){
     $(".hs-modal").hide(300);
     $(".ht-modal").hide(300);
+    $(".lb-modal").hide(300);
   });
 
   $("#sound-btn").click(function() {

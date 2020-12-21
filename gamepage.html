@@ -59,6 +59,23 @@
 <div id="click-sound"></div>
 <div id="timer" class="green-timer"></div>
 <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+<!-- firebase scripts -->
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
+<script>
+  let firebaseConfig = {
+    apiKey: "AIzaSyBkGZ9rHhPlp4Ef0YQW7oA44BWWCE3PQoc",
+    authDomain: "my-test-4e2f2.firebaseapp.com",
+    projectId: "my-test-4e2f2",
+    storageBucket: "my-test-4e2f2.appspot.com",
+    messagingSenderId: "946984997651",
+    appId: "1:946984997651:web:a73ac83f0d6377fc2d80e6",
+    measurementId: "G-EKKG4DR0TG"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  let db = firebase.firestore();
+</script>
 <script src="assets/js/gamepage.js"></script>
 <script src="assets/js/commonfunctions.js"></script>
 </body>

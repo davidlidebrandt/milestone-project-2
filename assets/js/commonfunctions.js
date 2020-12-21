@@ -59,7 +59,7 @@ db.collection("user_points").get().then(function(querySnapshot) {
      for(let i = 0; i < saveUser.length; i++) {
                 multiArr.push([saveUser[i].user_name, saveUser[i].user_points]);
             }
-        
+    // sort function (first two lines) was taken from the post by user "Nosredna" https://stackoverflow.com/questions/1069666/sorting-object-property-by-values
     multiArr.sort(function(a, b) {
     return a[1] - b[1]; });
     multiArr.reverse();

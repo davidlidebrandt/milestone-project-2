@@ -68,3 +68,4 @@ db.collection("user_points").get().then(function(querySnapshot) {
     for(let i = 0, k = 1; i < tempArr.length; i++, k++) {   
         $(`#val-${k}`).append(`Name: ${tempArr[i][0]} | ${tempArr[i][1]} points`);}
 }); }
+

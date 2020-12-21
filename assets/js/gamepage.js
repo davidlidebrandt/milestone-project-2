@@ -14,6 +14,10 @@
 
   $(".restart-btn").on("click", resetGame);
 
+ /* $("#send-score").on("click", function(event){
+    event.preventDefault();
+  })*/
+
    function resetGame() {
     clearInterval(resetCard);
     $(".card").off();
@@ -174,3 +178,19 @@ function sendMail(form) {
   };
 
 
+
+function testSendScore() {
+// Add a new document with a generated id.
+db.collection("user_points").add({
+    user_name: $("#user-score").value,
+    user_points: localStorage.getItem("points")
+})
+.then(function(docRef) {
+    console.log("Document written with ID: ", docRef.id);
+})
+.catch(function(error) {
+    console.error("Error adding document: ", error);
+});
+}
+
+testSendScore();

@@ -179,10 +179,11 @@ function sendMail(form) {
 
 
 
-function testSendScore() {
+function sendScore(form) {
 // Add a new document with a generated id.
+console.log(form.user.value)
 db.collection("user_points").add({
-    user_name: $("#user-score").value,
+    user_name: form.user.value,
     user_points: localStorage.getItem("points")
 })
 .then(function(docRef) {
@@ -191,6 +192,7 @@ db.collection("user_points").add({
 .catch(function(error) {
     console.error("Error adding document: ", error);
 });
+return false;
 }
 
-testSendScore();
+

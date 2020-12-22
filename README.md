@@ -154,7 +154,7 @@ out corresponding values during certain parts of the execution of the code. A lo
 trying out the different functions and seeing if they worked correctly. By clicking the cards in different orders
 many bugs and errors in the logic were found which helped a lot.
 
-### A list of tests that were done
+### A list of tests/debugs that were done
 
 * When the sound setting button was pressed a console log message was being printed with the corresponding sound 
 setting value to make sure it turned off and on as intended.
@@ -247,8 +247,12 @@ The project was deployed on Github Pages on https://github.com/, the following s
 
 ### Media
 
+The sound came from https://www.zapsplat.com/  https://www.zapsplat.com/?s=click&post_type=music&sound-effect-category-id=.
 
+The christmas icons came from https://www.flaticon.com/ https://www.flaticon.com/authors/pongsakornred.
 
+The smiley icons came from https://pixabay.com/ https://pixabay.com/sv/vectors/leende-smiley-glad-gul-ansikte-98458/
+https://pixabay.com/sv/vectors/ledsen-missn%C3%B6jda-f%C3%B6rl%C3%A5t-tr%C3%B6stl%C3%B6st-98457/
 
 ### Acknowledgments
 

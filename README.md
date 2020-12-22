@@ -28,7 +28,7 @@ the game som liveliness without being too intrusive.
 The developer's goal is to showcase a wide variety of software development skills. By using both custom HTML, CSS 
 and JavaScript, as well as libraries as JQuery and Bootstrap the developer wish to show proficiency in both writing
 own code and taking advantage of ready to go components and functions. The project involves writing logic for the game
-,working with the Web Storage API, the EmailJS service as well as the Firebase firestore database. All intended to showcase
+, working with the Web Storage API, the EmailJS service as well as the Firebase Firestore database. All intended to showcase
 a wide base of software skills. The focus of the project is interactivity which it accives in many ways by allowing
 the player to chose sound and level settings, playing the game, opening and closing modals, staring and restarting
 the game and filing out forms.
@@ -63,6 +63,35 @@ the game and filing out forms.
 
 ### Existing Features
 
+#### Index page
+
+* A sound setting button where you can turn on and off sounds in the game.
+
+* A dropdown menu where the user can set the level of the game, which changes the amount of time there is 
+to find a pair of cards.
+
+* A modal with local highscores which saves data to the Web Storage API.
+
+* A modal that displays a leader board of all users that submitted their scores which connects to the Firebase Firestore database.
+
+* A modal that displays instructions on how to play the game.
+
+* A button that links to the game page and initiates a new game.
+
+#### Game page
+
+* A card game that turns over cards in search of pairs.
+
+* A small menu in the top left corner with a link to the index page and a button that restarts the game.
+
+* A timer at the bottom of the page that counts down time and and ends the game if no pair is found in a certain amount of time.
+The timer also changes colors when time is beginning to run out, first to yellow then to red.
+
+* A modal that shows when a game is lost, which contains a link to the index page and a restart game button.
+
+* A modal that shows when a game is won, which contains a link to the index page and a restart game button. There
+are also two forms, one to submit your score to the leader board and one to submit your score to get a email with 
+that score through the EmailJS service.
 
 
 ### Future Features
@@ -217,6 +246,7 @@ The project was deployed on Github Pages on https://github.com/, the following s
 
 
 ### Media
+
 
 
 

@@ -170,9 +170,9 @@ function sendMail(form) {
        score: localStorage.getItem("points")
    })
     .then(function(response) {
-       alert("You succesfully sent your score");
+       alert("You succesfully sent your score ", response.text);
     }, function(error) {
-       alert("An error occured");
+       alert("An error occured", error);
     });
     return false;
   };
@@ -180,17 +180,16 @@ function sendMail(form) {
 
 
 function sendScore(form) {
-// Add a new document with a generated id.
-console.log(form.user.value)
+// from the firebase/firestore documentation on how to write data to the database
 db.collection("user_points").add({
     user_name: form.user.value,
     user_points: localStorage.getItem("points")
 })
 .then(function(docRef) {
-    console.log("Document written with ID: ", docRef.id);
+    alert("Your score was added with the ID: ", docRef.id);
 })
 .catch(function(error) {
-    console.error("Error adding document: ", error);
+    alert("Error adding your score: ", error);
 });
 return false;
 }

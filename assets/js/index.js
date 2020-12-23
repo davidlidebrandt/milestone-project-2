@@ -43,7 +43,6 @@ $(document).ready(function() {
          $(".circle-off").addClass("circle-on");
          $(".circle-on").removeClass("circle-off");
          sessionStorage.setItem("sound", "on");
-         console.log(sessionStorage.getItem("sound"));
      }
 
       else if($(this).hasClass("on-btn")) {
@@ -52,7 +51,6 @@ $(document).ready(function() {
          $(".circle-on").addClass("circle-off");
          $(".circle-off").removeClass("circle-on");
          sessionStorage.setItem("sound", "off");
-         console.log(sessionStorage.getItem("sound"));
      }
   });
 }); //end of ready function

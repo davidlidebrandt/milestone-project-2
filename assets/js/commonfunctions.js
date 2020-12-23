@@ -1,25 +1,25 @@
 function addScores(score) {
     let tempArray = [];
+    let lastIndex = 4;
+    let howManyScores = 5;
 
-    for(let i = 1; i<6; i++) {
+    for(let i = 1; i <= howManyScores; i++) {
         tempArray[i] = localStorage.getItem(`score${i}`)
     }
     tempArray.shift();
-// This part was taken from an answer given by user "dy_" rergarding how to sort an array with bigger numbers https://stackoverflow.com/questions/1063007/how-to-sort-an-array-of-integers-correctly
+// first three lines was taken from an answer given by user "dy_" rergarding how to sort an array with bigger numbers https://stackoverflow.com/questions/1063007/how-to-sort-an-array-of-integers-correctly
 let numArray = new Int32Array(tempArray);
 numArray.sort();
 numArray.reverse();
 
-if(score > numArray[4]) {
-    numArray[4] = score;
+if(score > numArray[lastIndex]) {
+    numArray[lastIndex] = score;
     numArray.sort();
     numArray.reverse();
-    console.log(numArray);
 }
 
 for(let i = 1, j = 0; i < 6; i++, j++) {
     localStorage.setItem(`score${i}`, numArray[j]);
-    console.log(localStorage.getItem(`score${i}`));
 }
 
 printScore();
@@ -64,8 +64,7 @@ db.collection("user_points").get().then(function(querySnapshot) {
     return a[1] - b[1]; });
     multiArr.reverse();
     let tempArr = multiArr.slice(0,5);
-    console.log(multiArr);
     for(let i = 0, k = 1; i < tempArr.length; i++, k++) {   
-        $(`#val-${k}`).append(`${tempArr[i][0]} with ${tempArr[i][1]} points`);}
+        $(`#val-${k}`).html(`${tempArr[i][0]} with ${tempArr[i][1]} points`);}
 }); }
 

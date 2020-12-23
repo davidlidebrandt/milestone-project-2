@@ -3,8 +3,6 @@
  let blockTime;
  let resetCard;
 
- 
-
   generateNewGame();
 
  $(document).ready(function() {
@@ -13,10 +11,6 @@
   $(".nav-btn-newgame").on("click", resetGame);
 
   $(".restart-btn").on("click", resetGame);
-
- /* $("#send-score").on("click", function(event){
-    event.preventDefault();
-  })*/
 
    function resetGame() {
     clearInterval(resetCard);
@@ -28,7 +22,6 @@
     $(".card").on("click", clickedCard);
     
 }
-
 
 }); //end of ready function
 
@@ -164,7 +157,6 @@ function blockTimer() {
 
 // code from the the emailjs documentation
 function sendMail(form) {
-     console.log("send mail")
      emailjs.send('default_service', 'template_fxoyyj6', {
        user_email: form.email.value,
        score: localStorage.getItem("points")

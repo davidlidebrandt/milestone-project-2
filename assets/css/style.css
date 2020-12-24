@@ -1,6 +1,13 @@
 body {
     font-family: 'Nerko One', cursive;
+     /* this part is taken from a post by user name m.spyratos to make the footer stick to the bottom: 
+    https://stackoverflow.com/questions/643879/css-to-make-html-page-footer-stay-at-bottom-of-the-page-with-a-minimum-height-b  
+    */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
+
 .align-center {
     text-align: center;
 }
@@ -27,10 +34,11 @@ body {
     background-color: #F4FAEF;
     text-align: center;
     width: 40%;
+    height: 40%;
     left: 30%;
     right: 30%;
-    top: 5%;
-    bottom: 5%;
+    top: 30%;
+    bottom: 30%;
 }
 
 .modal-h5 {
@@ -55,6 +63,7 @@ button:focus {
     opacity: 0.6;
     background-size: auto;
     position: absolute;
+    /* this part was taken from the w3schools on how to verticaly align items usin flexbox https://www.w3schools.com/css/css_align.asp*/
     display: flex;
     justify-content: center;
     align-items: center;
@@ -172,6 +181,15 @@ button:focus {
 }
 
 /*gamepage.html*/
+
+.game-section {
+    /* this part is also taken from the same post as the mentioned in the body*/
+    flex: 1;
+    /* this part was taken from the w3schools on how to verticaly align items usin flexbox https://www.w3schools.com/css/css_align.asp*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .restart-btn {
     border: none;
@@ -420,14 +438,20 @@ button:focus {
 
 /*media queries*/
 
-@media only screen and (max-width: 600px) {
+@media only screen and (min-width: 767.5px) {
     .card, .card-copy, .card-flipped {
-        height: 100px;
-        width: 60px;
+    height: 150px;
+    width: 100px;
     }
 }
 
 @media only screen and (max-width: 600px) {
+    
+    .card, .card-copy, .card-flipped {
+    height: 100px;
+    width: 60px;
+    }
+
     .nav-window {
     width: 90%;
     height: 90%;
@@ -438,5 +462,7 @@ button:focus {
     width: 90%;
     left: 5%;
     right: 5%;
+    top: 5%;
+    bottom: 5%;
     }
 }

@@ -6,6 +6,9 @@
   generateNewGame();
 
  $(document).ready(function() {
+  
+  $("#timer").html(time + " SECONDS LEFT");
+  
   $(".card").on("click", clickedCard);
   
   $(".nav-btn-newgame").on("click", resetGame);
@@ -20,6 +23,7 @@
     $(".game-over-modal").hide();
     $(".game-finished-modal").hide();
     $(".card").on("click", clickedCard);
+    $("#timer").html(time + " SECONDS LEFT");
     
 }
 
@@ -60,11 +64,10 @@ function clickedCard(){
           addFinalScore();
           blockTimer();
           addScores(parseInt(localStorage.getItem("points")));
-          }
-          localStorage.setItem("pairsleft", currentvalue);
+          }else {localStorage.setItem("pairsleft", currentvalue);
           resetTimer();
           localStorage.setItem("lastcard", " ");
-           $(".card").on("click", clickedCard);
+           $(".card").on("click", clickedCard);}
           } else { //executed if no match is found
           resetCard = setTimeout(function() {
           $(`#${id}`).addClass("card");
@@ -81,13 +84,12 @@ function countDownTimer() {
   
   $("#timer").removeClass("yellow-timer");
   $("#timer").removeClass("red-timer");
-
   time = sessionStorage.getItem("time");
 
   counterTime = setInterval(function(){$("#timer").html(time + " SECONDS LEFT"); time--;  
   if(time < 12) {$("#timer").addClass("yellow-timer"); }
   if(time < 6) {$("#timer").addClass("red-timer"); }
-  if(time <= 0) {$("#timer").hide(); $(".game-over-modal").show(); }
+  if(time < 0) {$(".game-over-modal").show(); blockTimer(); }
   }, 1000);
  
 };
@@ -95,6 +97,13 @@ function countDownTimer() {
 function resetTimer () {
     clearInterval(counterTime);
     countDownTimer();
+}
+
+function blockTimer() {
+ /*blockTime = setInterval(function(){
+    resetTimer();
+    }, 1000)*/
+    clearInterval(counterTime);
 }
 
 function generateRandomClass () {
@@ -138,22 +147,13 @@ function generateNewGame () {
  localStorage.setItem("points", "100");
  generateRandomClass();
  addGeneralClass();
- clearInterval (blockTime);
+ /*clearInterval (blockTime);*/
  resetTimer();
- $("#timer").show();
 }
 
 function addFinalScore () {
     $(".game-finished-modal>h5").html(`You finished the game with ${localStorage.getItem("points")} points`);
 }
-
-function blockTimer() {
- blockTime = setInterval(function(){
-    resetTimer();
-    }, 1000)
-}
-
-
 
 // code from the the emailjs documentation
 function sendMail(form) {

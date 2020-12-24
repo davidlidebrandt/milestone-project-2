@@ -96,7 +96,7 @@ that score through the EmailJS service.
 
 ### Future Features
 
-
+* Option to add more or cards to the game.
 
 ## Technologies Used
 
@@ -112,7 +112,7 @@ For the styling of the HTML elements.
 
 To add interactivity to the project.
 
-* JQuery
+* JQuery [https://jquery.com/]
 
 JQuery functions where uses to manipulate the DOM and taking actions.
 
@@ -154,6 +154,40 @@ out corresponding values during certain parts of the execution of the code. A lo
 trying out the different functions and seeing if they worked correctly. By clicking the cards in different orders
 many bugs and errors in the logic were found which helped a lot.
 
+### Bugs
+
+* The first bug that occured was that when you returned from the game page to the index page the sound settings were 
+still set to what ever the user had chosen before but showed "off" regardless. The soulution was to separate the
+javascript for the two pages in to two different files so that the value was initalized to the default value when ever
+the user returned home.
+
+* Trying to sort the array that displays the different highscores did not work using array.sort() method since that 
+method only sorts the items by their first number. The was solved by using the answer from user "dy_" in this stackflow post https://stackoverflow.com/questions/1063007/how-to-sort-an-array-of-integers-correctly,
+which basically makes a typedArray copy of the array which then can be sorted using the arrays.sort() method.
+
+* The general .card class is being removed and added to show the card. A bug that occured was that when adding back 
+the .card class when no match was found was that it was added as the last class of the element wich messed up
+the logic of the game. The soulution was to add the .card after the other classes in the CSS file, creating
+a function which added the class to the elements through a for loop after the other classes was added and then
+changing the logic to fit these new conditons.
+
+* When trying to "flip" back the card after no match was found the this keyword did not work and the .card class
+was not being added back to that element. Still not really sure why but the soulution was to extract the id 
+of the element and then using that to add back the .card class.
+
+* After the game was finished successfully the timer still counted down and when the time had ran out the modal
+for a lost game popped up. The soulution to this was to add a function that resets the timer on certain intervals
+and then stopping the execution of that function whenever a new game was started. This soultion worked but introduced
+a new bug, when starting a new game from one of the modal buttons the timer for a short second showed a negative
+number. The soultion was to remove the above overly complicated soultion and just use the clearInterval function
+on the timer directly.
+
+* The reset game button did not work properly the first time it was pressed but worked if you pressed it two times.
+The reason for this was that a setTimeout function is being called to reset the lastCard variable after two seconds.
+When a card was clicked the lastCard variable was being set to that value but then after two seconds it was reseted
+to the default value which messed up the logic of the game. The soultion was use a clearInterval function which
+stops the setTimeout function from executing.
+
 ### A list of tests/debugs that were done
 
 * When the sound setting button was pressed a console log message was being printed with the corresponding sound 
@@ -189,39 +223,27 @@ that only the highest values were being printed. No problems found, only the rig
 
 * The leader board feature was being tested by adding scores to the database and checking to see which values were
 being printed. No issues found, the right values were printed and only five users were shown which was the
-intention.
+intention. 
 
+* The home link and restart button in the navigation menu was tested several times to ensure they work as intended.
+All issues found resolved and working fine.
 
+* The game has been played numerous times, the issues that were found has been resolved and no new bugs has 
+appeared.
 
+* The function of submiting the score was tested by submiting scores and checking the Firestore database
+to see if the scores were being saved, which they were.
 
-### Bugs
+* The function of the submiting an email address and reciving the score of the game was tested several times, no
+issues found, the score was being sent every time it was tested.
 
-The first bug that occured was that when you returned from the game page to the index page the sound settings were 
-still set to what ever the user had chosen before but showed "off" regardless. The soulution was to separate the
-javascript for the two pages in to two different files so that the value was initalized to the default value when ever
-the user returned home.
+* The home links and the restart game buttons from the modals were tested several times. The issues that 
+were found earlier were resolved and no further issues found.
 
-Trying to sort the array that displays the different highscores did not work using array.sort() method since that 
-method only sorts the items by their first number. The was solved by using the answer from user "dy_" in this stackflow post https://stackoverflow.com/questions/1063007/how-to-sort-an-array-of-integers-correctly,
-which basically makes a typedArray copy of the array which then can be sorted using the arrays.sort() method.
+* The forms were tried to be submitted without filling out and email address or user name. Did not succeed 
+which was as intended, email address/username is required.
 
-The general .card class is being removed and added to show the card. A bug that occured was that when adding back 
-the .card class when no match was found was that it was added as the last class of the element wich messed up
-the logic of the game. The soulution was to add the .card after the other classes in the CSS file, creating
-a function which added the class to the elements through a for loop after the other classes was added and then
-changing the logic to fit these new conditons.
-
-When trying to "flip" back the card after no match was found the this keyword did not work and the .card class
-was not being added back to that element. Still not really sure why but the soulution was to extract the id 
-of the element and then using that to add back the .card class.
-
-After the game was finished successfully the timer still counted down and when the time had ran out the modal
-for a lost game popped up. The soulution to this was to add a function that resets the timer on certain intervals
-and then stopping the execution of that function whenever a new game was started.
-
-
-
-## User Stories
+### User Stories
 
 
 ## Deployment

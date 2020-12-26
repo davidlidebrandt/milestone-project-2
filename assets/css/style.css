@@ -86,6 +86,13 @@ button:focus {
     letter-spacing: 1.3px;
 }
 
+.hs-modal, .ht-modal, .lb-modal {
+    width: 50%;
+    height: 60%;
+    top: 20%;
+    left: 25%;
+}
+
 .hs-col {
     margin-bottom: 10px;
     margin-top: 10px;

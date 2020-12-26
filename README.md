@@ -96,7 +96,11 @@ that score through the EmailJS service.
 
 ### Future Features
 
-* Option to add more or cards to the game.
+* Option to increase the difficulty of the game. For example adding more cards to the game, limitif the amount of
+clicks that are allowed between finding pairs of cards and reducing the time of the timer as the game progresses.
+
+* Adding a new type of card game, for example a game where the player has to remember the positions of a sequence
+of cards.
 
 ## Technologies Used
 
@@ -245,6 +249,34 @@ which was as intended, email address/username is required.
 
 ### User Stories
 
+* As a user I want clear instructions how to play the game.
+
+There is and easyily accessable modal on the index page with clear instructions on how to play the game.
+
+* As a user I want clear and intuative ways of navigating the site.
+
+The navigation through the site is made simple, from the index page all settings, instructions, highscore tables etc 
+are easyily accessed through the main menu. From the same menu the game is started. On the game page there is 
+a small menu bar in the top left corner were the user can return to to index page or restart the game, the menu
+is easy to find an looks the same across different devices. When a game is finished there are two easyily found 
+links/buttons which leads back to the index page or starts a new game.
+
+* As a user I want any entering of personal details to be fully optional.
+
+Entering any information is fully optional and not required to play the game. To recive an email with their score
+or to have a chance to appear on the leader board a user have the possibilty to enter their details and submiting
+them after the game is already finished.
+
+* As a user I want to decide if any sound is going to be played.
+
+The default sound setting is off in the game, the user self decides if any sound is going to be played. Even as a 
+user returns to the index page having already played a game the sound setting returns to the default off to 
+prevent any unwanted distubance.
+
+* As a user I want both a fun and challenging experience.
+
+The game requires the use of memory and speed as well as handeling the stress of the time on the timer running
+out. Chaning the levels really makes a difference in the difficulty of the game.
 
 ## Deployment
 

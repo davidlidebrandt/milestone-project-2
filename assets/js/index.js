@@ -4,15 +4,18 @@ sessionStorage.setItem("sound", "off");
 $(document).ready(function() {
 
   $("#btn-easy").click(function(){
-  sessionStorage.setItem("level", "60"); 
+  sessionStorage.setItem("levelTime", "60");
+  sessionStorage.setItem("levelPoints", "240");
   });  
 
    $("#btn-medium").click(function(){
-  sessionStorage.setItem("level", "40");
+  sessionStorage.setItem("levelTime", "40");
+  sessionStorage.setItem("levelPoints", "300");
   });  
 
    $("#btn-hard").click(function(){
-  sessionStorage.setItem("level", "20");
+  sessionStorage.setItem("levelTime", "20");
+  sessionStorage.setItem("levelPoints", "360");
   });  
 
   $("#high-scores").click(function () {

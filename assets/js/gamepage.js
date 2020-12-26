@@ -87,8 +87,8 @@ function countDownTimer() {
   time = sessionStorage.getItem("time");
 
   counterTime = setInterval(function(){$("#timer").html(time + " SECONDS LEFT"); time--;  
-  if(time < 12) {$("#timer").addClass("yellow-timer"); }
-  if(time < 6) {$("#timer").addClass("red-timer"); }
+  if(time < 12 && time >= 6) {$("#timer").addClass("yellow-timer"); }
+  if(time < 6 ) {$("#timer").addClass("red-timer"); }
   if(time < 0) {$(".game-over-modal").show(); blockTimer(); }
   }, 1000);
  
@@ -139,15 +139,15 @@ function removeOldClasses () {
 }
 
 function generateNewGame () {
- let setLevel = sessionStorage.getItem("level");
- setLevel === null ? sessionStorage.setItem("time", "40") : sessionStorage.setItem("time", setLevel)
+ let setLevelTime = sessionStorage.getItem("levelTime");
+ let setLevelPoints = sessionStorage.getItem("levelPoints")
+ setLevelTime === null ? sessionStorage.setItem("time", "40") : sessionStorage.setItem("time", setLevelTime)
+ setLevelPoints === null ? sessionStorage.setItem("points", "300") : sessionStorage.setItem("points", setLevelPoints)
  localStorage.setItem("clicks", "0");
  localStorage.setItem("pairsleft", "8");
  localStorage.setItem("lastcard", " ");
- localStorage.setItem("points", "100");
  generateRandomClass();
  addGeneralClass();
- /*clearInterval (blockTime);*/
  resetTimer();
 }
 

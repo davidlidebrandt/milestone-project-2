@@ -142,7 +142,7 @@ function generateNewGame () {
  let setLevelTime = sessionStorage.getItem("levelTime");
  let setLevelPoints = sessionStorage.getItem("levelPoints")
  setLevelTime === null ? sessionStorage.setItem("time", "40") : sessionStorage.setItem("time", setLevelTime)
- setLevelPoints === null ? sessionStorage.setItem("points", "300") : sessionStorage.setItem("points", setLevelPoints)
+ setLevelPoints === null ? localStorage.setItem("points", "300") : localStorage.setItem("points", setLevelPoints)
  localStorage.setItem("clicks", "0");
  localStorage.setItem("pairsleft", "8");
  localStorage.setItem("lastcard", " ");

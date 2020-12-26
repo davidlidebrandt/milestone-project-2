@@ -33,12 +33,12 @@ body {
     z-index: 100;
     background-color: #F4FAEF;
     text-align: center;
-    width: 40%;
-    height: 40%;
-    left: 30%;
-    right: 30%;
-    top: 30%;
-    bottom: 30%;
+    width: 50%;
+    height: 70%;
+    left: 25%;
+    right: 25%;
+    top: 15%;
+    bottom: 15%;
 }
 
 .modal-h5 {
@@ -279,7 +279,6 @@ button:focus {
     left: 10px;
 }
 
-
 .nav-btn-newgame {
     right: 10px; 
 }
@@ -438,13 +437,6 @@ button:focus {
 
 /*media queries*/
 
-@media only screen and (min-width: 767.5px) {
-    .card, .card-copy, .card-flipped {
-    height: 150px;
-    width: 100px;
-    }
-}
-
 @media only screen and (max-width: 600px) {
     
     .card, .card-copy, .card-flipped {
@@ -458,11 +450,10 @@ button:focus {
     }
 
     .base-modal {
-    height: 90%;
-    width: 90%;
-    left: 5%;
-    right: 5%;
-    top: 5%;
-    bottom: 5%;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 0px;
     }
 }

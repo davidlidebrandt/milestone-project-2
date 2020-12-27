@@ -71,7 +71,6 @@ button:focus {
 
 .nav-window {
     width: 50%;
-    height: 70%;
     background-color: #FAF3D1;
     border-radius: 10px;
     margin: auto;
@@ -185,6 +184,10 @@ button:focus {
 
 #sound {
     padding-left: 6px;
+}
+
+#how-to {
+margin-bottom: 20px;    
 }
 
 /*gamepage.html*/
@@ -453,7 +456,6 @@ button:focus {
 
     .nav-window {
     width: 90%;
-    height: 90%;
     }
 
     .base-modal {

@@ -153,6 +153,12 @@ checking the responsivness of the page with their screen rendering tools.
 
 ## Testing
 
+The CSS was ran through the W3C CSS Validation Service https://jigsaw.w3.org/css-validator/ , no errors found.
+
+The HTML was ran through the W3C Markup Validation Service https://validator.w3.org/
+
+The JavaScript code was ran through https://jshint.com/
+
 All of the testing of the functions and features of the game was done manually, the main way of doing so was to use the console log and printing
 out corresponding values during certain parts of the execution of the code. A lot of testing was also done by just
 trying out the different functions and seeing if they worked correctly. By clicking the cards in different orders
@@ -299,7 +305,7 @@ The project was deployed on Github Pages on https://github.com/, the following s
 
 ### Content
 
-
+All of the content were created by the developer.
 
 ### Media
 
@@ -310,5 +316,9 @@ The christmas icons came from https://www.flaticon.com/ https://www.flaticon.com
 The smiley icons came from https://pixabay.com/ https://pixabay.com/sv/vectors/leende-smiley-glad-gul-ansikte-98458/
 https://pixabay.com/sv/vectors/ledsen-missn%C3%B6jda-f%C3%B6rl%C3%A5t-tr%C3%B6stl%C3%B6st-98457/
 
+The image in the index page came from user Pixabay on
+https://www.pexels.com/photo/snow-covered-ground-60561/
+
 ### Acknowledgments
 
+Thanks to my tutors and my mentor at Code Institute for help throughout the project.

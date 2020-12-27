@@ -116,7 +116,7 @@ For the styling of the HTML elements.
 
 To add interactivity to the project.
 
-* JQuery [https://jquery.com/]
+* [JQuery](https://jquery.com/)
 
 JQuery functions where uses to manipulate the DOM and taking actions.
 
@@ -246,6 +246,8 @@ were found earlier were resolved and no further issues found.
 
 * The forms were tried to be submitted without filling out and email address or user name. Did not succeed 
 which was as intended, email address/username is required.
+
+* The links to the external sites was tested: works and opens in a new tab as intended.
 
 ### User Stories
 

@@ -178,10 +178,10 @@ db.collection("user_points").add({
     user_points: localStorage.getItem("points")
 })
 .then(function(docRef) {
-    alert("Your score was added with the ID: ", docRef.id);
+    alert("Your score was sent", docRef.id);
 })
 .catch(function(error) {
-    alert("Error adding your score: ", error);
+    alert("Error sending your score: ", error);
 });
 return false;
 }

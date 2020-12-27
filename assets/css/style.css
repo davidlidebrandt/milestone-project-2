@@ -70,7 +70,7 @@ button:focus {
 }
 
 .nav-window {
-    width: 50%;
+    width: 70%;
     background-color: #FAF3D1;
     border-radius: 10px;
     margin: auto;
@@ -464,5 +464,11 @@ margin-bottom: 20px;
     top: 0;
     left: 0;
     border-radius: 0px;
+    }
+}
+
+@media only screen and (min-width: 767.5px) {
+    .nav-window {
+        width: 50%;
     }
 }

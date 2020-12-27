@@ -147,7 +147,7 @@ Adobe XD was used to create the wireframes and mockups for the project.
 
 * [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools)
 
-Chrome DevTools was heavily uses throughout the project,  mainly by debugging and testing with help of the console and
+Chrome DevTools was heavily used throughout the project,  mainly by debugging and testing with help of the console and
 checking the responsivness of the page with their screen rendering tools.
 
 

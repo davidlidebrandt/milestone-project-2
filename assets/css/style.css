@@ -34,11 +34,10 @@ body {
     background-color: #F4FAEF;
     text-align: center;
     width: 50%;
-    height: 70%;
     left: 25%;
     right: 25%;
-    top: 15%;
-    bottom: 15%;
+    /*top: 15%;
+    bottom: 15%;*/
 }
 
 .modal-h5 {
@@ -47,8 +46,7 @@ body {
 }
 
 .close-btn-wrap {
-    position: absolute;
-    bottom: 20px;
+    margin-bottom: 20px;
 }
 
 button:focus {
@@ -83,13 +81,6 @@ button:focus {
 .window-item {
     margin-bottom: 15px;
     letter-spacing: 1.3px;
-}
-
-.hs-modal, .ht-modal, .lb-modal {
-    width: 50%;
-    height: 60%;
-    top: 20%;
-    left: 25%;
 }
 
 .hs-col {
@@ -241,13 +232,15 @@ margin-bottom: 20px;
 }
 
 #sad-smiley, #smiley {
-    margin: 0 auto;
-    margin-top: 20px;
-    width: 30%;
-    height: 30%;
     background-size: contain;
-    background-position: center;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
     background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 
 #smiley {
@@ -278,19 +271,21 @@ margin-bottom: 20px;
 }
 
 .nav-btn-home, .nav-btn-newgame {
-    position: absolute;
     background-color: #F4FAEF;
     border: none;
-    bottom: 20px;
     color: black;
+    margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 .nav-btn-home {
-    left: 10px;
+    margin-left: 20px;
+    float: left;
 }
 
 .nav-btn-newgame {
-    right: 10px; 
+    margin-right: 20px;
+    float: right;
 }
 
 .input-field {
@@ -459,16 +454,20 @@ margin-bottom: 20px;
     }
 
     .base-modal {
-    height: 100%;
     width: 100%;
-    top: 0;
     left: 0;
     border-radius: 0px;
     }
+
+    .close-btn-wrap {
+    position: absolute;
+    bottom: 20px;
+    }
+
 }
 
 @media only screen and (min-width: 767.5px) {
     .nav-window {
-        width: 50%;
+    width: 50%;
     }
 }

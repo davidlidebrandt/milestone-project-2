@@ -1,15 +1,19 @@
 # Milestone Project 2
 
-<img src=""
+<img src="assets/images/wireframes-mockups/index.png"
      alt="Index page of deployed project"
      style="height: 200px; width: 400px;" />
      
-<img src=""
-     alt="Index page of deployed project"
+<img src="assets/images/wireframes-mockups/gamepage.png"
+     alt="Game page of deployed project"
      style="height: 200px; width: 400px;" />
 
-<img src=""
-     alt="Index page of deployed project"
+<img src="assets/images/wireframes-mockups/gamewon.png"
+     alt="Game page when won of deployed project"
+     style="height: 200px; width: 400px;" />
+
+<img src="assets/images/wireframes-mockups/gamelost.png"
+     alt="Game page when lost of deployed project"
      style="height: 200px; width: 400px;" />
 
 This project is intended to provide an experience which is both fun and challenging. It is a memory game were you are tasked to find
@@ -32,7 +36,7 @@ and JavaScript, as well as libraries as JQuery and Bootstrap the developer wish 
 own code and taking advantage of ready to go components and functions. The project involves writing logic for the game
 , working with the Web Storage API, the EmailJS service as well as the Firebase Firestore database. All intended to showcase
 a wide base of software skills. The focus of the project is interactivity which it achieves in many ways by allowing
-the player to chose sound and level settings, playing the game, opening and closing modals, staring and restarting
+the player to chose sound and level settings, playing the game, opening and closing modals, starting and restarting
 the game and filing out forms.
 
 The "Nerko One" font was uses throughout the project to give the site a game-like look. The icons were chosen
@@ -157,21 +161,32 @@ Adobe XD was used to create the wireframes and mockups for the project.
 Chrome DevTools was heavily used throughout the project,  mainly by debugging and testing with help of the console and
 checking the responsiveness of the page with their screen rendering tools.
 
+* http://whatismyscreenresolution.net/multi-screen-test 
+
+For testing the responsiveness across different devices.
 
 ## Testing
 
-The CSS was ran through the W3C CSS Validation Service https://jigsaw.w3.org/css-validator/ , no errors found.
+* The CSS was ran through the W3C CSS Validation Service https://jigsaw.w3.org/css-validator/ , no errors found.
 
-The HTML was ran through the W3C Markup Validation Service https://validator.w3.org/, no errors found.
+* The HTML was ran through the W3C Markup Validation Service https://validator.w3.org/, no errors found.
 
-The JavaScript code was ran through https://jshint.com/, the only warnings that come up are of let,const and string literals
+* The JavaScript code was ran through https://jshint.com/, the only warnings that come up are of let,const and string literals
 only being available in ES6. It also warns about some variables not being defined/used which they are, they are just
 located in different JavaScript files.
+
+* The project was tested on three different web browsers: Chrome, Microsoft Edge and Firefox which all worked fine.
+Safari was only tested on mobile devices because no larger devices were available during the development process.
+
+* The responsiveness was tested with Chrome DevTools and http://whatismyscreenresolution.net/multi-screen-test 
+a wide variety of device screens were rendered and tested, from modern phones, tablets, desktops and even a 
+a few TV screens.
 
 All of the testing of the functions and features of the game was done manually, the main way of doing so was to use the console log and printing
 out corresponding values during certain parts of the execution of the code. A lot of testing was also done by just
 trying out the different functions and seeing if they worked correctly. By clicking the cards in different orders
-many bugs and errors in the logic were found which helped a lot.
+many bugs and errors in the logic were found which helped a lot. The deployed project was also sent to friends and
+family for testing to find bugs and get their opinion on the project.
 
 ### Bugs
 
@@ -195,7 +210,7 @@ was not being added back to that element. Still not really sure why but the solu
 of the element and then using that to add back the .card class.
 
 * After the game was finished successfully the timer still counted down and when the time had ran out the modal
-for a lost game popped up. The soulution to this was to add a function that resets the timer on certain intervals
+for a lost game popped up. The solution to this was to add a function that resets the timer on certain intervals
 and then stopping the execution of that function whenever a new game was started. This solution worked but introduced
 a new bug, when starting a new game from one of the modal buttons the timer for a short second showed a negative
 number. The solution was to remove the above overly complicated solution and just use the clearInterval function

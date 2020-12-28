@@ -180,7 +180,8 @@ Safari was only tested on mobile devices because no larger devices were availabl
 
 * The responsiveness was tested with Chrome DevTools and http://whatismyscreenresolution.net/multi-screen-test 
 a wide variety of device screens were rendered and tested, from modern phones, tablets, desktops and even a 
-a few TV screens.
+a few TV screens. The project looks fine on screens as small as 320 pixels, when the screen sizes get smaller
+than that the layout is not as nice but the site is still functional.
 
 All of the testing of the functions and features of the game was done manually, the main way of doing so was to use the console log and printing
 out corresponding values during certain parts of the execution of the code. A lot of testing was also done by just
@@ -340,7 +341,7 @@ The Christmas icons came from https://www.flaticon.com/, by author https://www.f
 The smiley icons came from https://pixabay.com/ https://pixabay.com/sv/vectors/leende-smiley-glad-gul-ansikte-98458/
 https://pixabay.com/sv/vectors/ledsen-missn%C3%B6jda-f%C3%B6rl%C3%A5t-tr%C3%B6stl%C3%B6st-98457/
 
-The image in the index page came from user Pixabay on
+The image on the index page came from user Pixabay on
 https://www.pexels.com/photo/snow-covered-ground-60561/
 
 ### Acknowledgments

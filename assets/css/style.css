@@ -59,8 +59,9 @@ button:focus {
     height: 100%;
     background-image: url("../images/background/snowonground.jpg");
     opacity: 0.8;
-    background-size: auto;
+    background-size: cover;
     position: absolute;
+    background-repeat: no-repeat;
     /* this part was taken from the w3schools on how to verticaly align items usin flexbox https://www.w3schools.com/css/css_align.asp*/
     display: flex;
     justify-content: center;

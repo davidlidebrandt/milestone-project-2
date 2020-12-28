@@ -26,10 +26,10 @@ body {
 
 .base-modal {
     display: none;
-    border: solid 1px black;
+    border: solid 1px #000000;
     position: absolute;
     border-radius: 10px;
-    box-shadow: 1px 1px 1px grey;
+    box-shadow: 1px 1px 1px #808080;
     z-index: 100;
     background-color: #F4FAEF;
     text-align: center;
@@ -73,7 +73,7 @@ button:focus {
     background-color: #FAF3D1;
     border-radius: 10px;
     margin: auto;
-    box-shadow: 1px 1px 1px black;
+    box-shadow: 1px 1px 1px #000000;
     position: relative;
 }
 
@@ -97,8 +97,8 @@ button:focus {
 }
 
 .close-btn {
-    border: solid 1px black;
-    box-shadow: 1px 1px 1px black;
+    border: solid 1px #000000;
+    box-shadow: 1px 1px 1px #000000;
     background-color: #F8C9C9;
     border-radius: 5px;
     margin-top: 10px;
@@ -113,7 +113,7 @@ button:focus {
     padding-right: 6px;
     padding-top: 6px;
     padding-bottom: 6px;
-    box-shadow: 0.5px 0.5px 0.5px grey;
+    box-shadow: 0.5px 0.5px 0.5px #808080;;
     display: inline;
     color: black;
 }
@@ -126,12 +126,12 @@ button:focus {
 }
 
 .on-btn, .off-btn {
-   border: solid 1px grey;
+   border: solid 1px #808080;
     border-radius: 5px;
     width: 20px;
     vertical-align: middle;
     margin-left: 20px;
-    box-shadow: 0.5px 0.5px 0.5px grey;
+    box-shadow: 0.5px 0.5px 0.5px #808080;
 }
 
 .on-btn {
@@ -144,7 +144,7 @@ button:focus {
 
 .circle-on, .circle-off {
     border-radius: 50%;
-    background-color: black;
+    background-color: #000000;
     width: 15px;
     height: 15px;
     display: block;
@@ -163,7 +163,7 @@ button:focus {
 }
 
 .list-hs {
-    border: solid black 1px;
+    border: solid #000000 1px;
     padding: 2px;
 }
 
@@ -213,20 +213,20 @@ margin-bottom: 20px;
 
 .menu {
     display: inline-block;
-    border: solid 1px black;
+    border: solid 1px #000000;
     border-radius: 0px 5px 5px 0px;
     background-color: #ECF9E6;
-    box-shadow: 1px 1px 1px black;
+    box-shadow: 1px 1px 1px #000000;
 }
 
 .menu-itm {
     margin-left: 10px;
     margin-right: 10px;
-    color: black;
+    color: #000000;
 }
 
 .menu-itm:hover {
-    color: black;
+    color: #000000;
     text-decoration: underline;
 }
 
@@ -237,7 +237,7 @@ margin-bottom: 20px;
     width: 40%;
     text-align: center;
     border-radius: 10px;
-    box-shadow: 1px 1px 1px black;
+    box-shadow: 1px 1px 1px #000000;
 }
 
 #sad-smiley, #smiley {
@@ -282,7 +282,7 @@ margin-bottom: 20px;
 .nav-btn-home, .nav-btn-newgame {
     background-color: #F4FAEF;
     border: none;
-    color: black;
+    color: #000000;
     margin-bottom: 20px;
     margin-top: 20px;
 }
@@ -300,8 +300,8 @@ margin-bottom: 20px;
 .input-field {
     width: 80%;
     border-radius: 5px;
-    border: solid 0.5px grey;
-    box-shadow: 1px 1px 1px grey;
+    border: solid 0.5px #808080;
+    box-shadow: 1px 1px 1px #808080;
 }
 
 .submit-btn {
@@ -331,7 +331,7 @@ margin-bottom: 20px;
 }
 
 .cus-footer a {
-    color: black;
+    color: #000000;
 }
 
 /*card classes*/
@@ -422,18 +422,18 @@ margin-bottom: 20px;
     margin-top: 20px;
     background-repeat: no-repeat;
     background-size: contain;
-    box-shadow: 1px 1px 1px grey;
+    box-shadow: 1px 1px 1px #808080;
     border-radius: 8px;
-    border: solid 2px black;
+    border: solid 2px #000000;
     background-position: center;
 }
 
 .card, .card-copy {
     height: 120px;
     width: 80px;
-    box-shadow: 1px 1px 1px grey;
+    box-shadow: 1px 1px 1px #808080;
     border-radius: 8px;
-    border: solid 2px black;
+    border: solid 2px #000000;
     background-color: #E5EFEE;
     margin-bottom: 15px;
     margin: 0 auto;

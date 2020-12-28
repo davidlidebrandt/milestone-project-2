@@ -346,4 +346,5 @@ https://www.pexels.com/photo/snow-covered-ground-60561/
 
 ### Acknowledgments
 
-Thanks to my tutors and my mentor at Code Institute for help throughout the project.
+Thanks to my tutors and my mentor at Code Institute for help throughout the project. I would also like to thank 
+the community on Slack for valuble input regarding the project.

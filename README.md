@@ -46,8 +46,8 @@ named to make their intention clear.
 
 A few notes on the lack of alt attributes and sr-only elements. After considerations the decision was made not to include
 these in the game itself. The game would be very hard to play if the icons cannot be seen and since the logic of
-the game relies on putting the icons as background images I have decided to keep it this way. A possible better 
-way of doing it would be to put the icons in img tags with alt attributes as back up but since it is a game which
+the game relies on putting the icons as background images I have decided to keep it this way. A possibly better 
+way of doing it would be to put the icons in img tags with alt attributes as back up, but since it is a game which
 highly depends on the visual impact the need for this seems less important.
 
 ### User Stories

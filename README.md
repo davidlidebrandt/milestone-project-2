@@ -1,15 +1,15 @@
 # Milestone Project 2
 
 <img src=""
-     alt="Index page of deplyed project"
+     alt="Index page of deployed project"
      style="height: 200px; width: 400px;" />
      
 <img src=""
-     alt="Index page of deplyed project"
+     alt="Index page of deployed project"
      style="height: 200px; width: 400px;" />
 
 <img src=""
-     alt="Index page of deplyed project"
+     alt="Index page of deployed project"
      style="height: 200px; width: 400px;" />
 
 This project is intended to provide an experience which is both fun and challenging. It is a memory game were you are tasked to find
@@ -21,9 +21,11 @@ pairs of cards, it tests and trains your memory but also your speed since you on
 
 ## UX
 
-The "Nerko One" font was uses throughout the project to give the site a game-like look. The icons were chosen
-based on the time of the year and hoped to give the user some extra entertainment. The colors were chosen to give
-the game som liveliness without being too intrusive.
+The purpuose of the project is to create a basic memory game where the user is tasked to find pairs of cards.
+The user starts the game, all cards are presented and the user can click on the cards to reveale their value.
+Another main feature of the game will be that a timer counts down from a certain value and if no pair of cards is
+found before it runs out the game will be lost. The game is intended to be both entertaining and useful by testing
+and training the users memory and abilaty to handle the stress of the timer that counts down.
 
 The developer's goal is to showcase a wide variety of software development skills. By using both custom HTML, CSS 
 and JavaScript, as well as libraries as JQuery and Bootstrap the developer wish to show proficiency in both writing
@@ -32,6 +34,11 @@ own code and taking advantage of ready to go components and functions. The proje
 a wide base of software skills. The focus of the project is interactivity which it accives in many ways by allowing
 the player to chose sound and level settings, playing the game, opening and closing modals, staring and restarting
 the game and filing out forms.
+
+The "Nerko One" font was uses throughout the project to give the site a game-like look. The icons were chosen
+based on the time of the year and hoped to give the user some extra entertainment. The colors were chosen to give
+the game som liveliness without being too intrusive. The navigation were kept simple, with links/buttons
+named to maked their intention clear.
 
 
 ### User Stories
@@ -155,9 +162,11 @@ checking the responsivness of the page with their screen rendering tools.
 
 The CSS was ran through the W3C CSS Validation Service https://jigsaw.w3.org/css-validator/ , no errors found.
 
-The HTML was ran through the W3C Markup Validation Service https://validator.w3.org/
+The HTML was ran through the W3C Markup Validation Service https://validator.w3.org/, no errors found.
 
-The JavaScript code was ran through https://jshint.com/
+The JavaScript code was ran through https://jshint.com/, the only warnings that come up are of let,const and string literals
+only being available in ES6. It also warns about some variables not being defined/used which they are, they are just
+located in different JavaScript files.
 
 All of the testing of the functions and features of the game was done manually, the main way of doing so was to use the console log and printing
 out corresponding values during certain parts of the execution of the code. A lot of testing was also done by just
@@ -305,13 +314,13 @@ The project was deployed on Github Pages on https://github.com/, the following s
 
 ### Content
 
-All of the content were created by the developer.
+All of the content was created by the developer.
 
 ### Media
 
 The sound came from https://www.zapsplat.com/  https://www.zapsplat.com/?s=click&post_type=music&sound-effect-category-id=.
 
-The christmas icons came from https://www.flaticon.com/ https://www.flaticon.com/authors/pongsakornred.
+The christmas icons came from https://www.flaticon.com/, by author https://www.flaticon.com/authors/pongsakornred.
 
 The smiley icons came from https://pixabay.com/ https://pixabay.com/sv/vectors/leende-smiley-glad-gul-ansikte-98458/
 https://pixabay.com/sv/vectors/ledsen-missn%C3%B6jda-f%C3%B6rl%C3%A5t-tr%C3%B6stl%C3%B6st-98457/

@@ -40,14 +40,14 @@ function clickedCard() {
     let id = this.id;
     $(this).off();
 
-    //executed if no other card is flipped
+    //executed if no other card is shown
     if (localStorage.getItem("clicks") === "0") {
         localStorage.setItem("clicks", "1");
         let arrayofclasses = this.className.split(" ");
         let accountforcopy = arrayofclasses[0].split("-");
         localStorage.setItem("lastcard", accountforcopy[0]);
         $(this).removeClass("card");
-    } else if (localStorage.getItem("clicks") === "1") {  //executed if another card is already flipped
+    } else if (localStorage.getItem("clicks") === "1") {  //executed if another card is already shown
         $(".card").off();
         $(this).removeClass("card");
         localStorage.setItem("clicks", "0");
@@ -103,15 +103,12 @@ function resetTimer() {
 }
 
 function blockTimer() {
-    /*blockTime = setInterval(function(){
-       resetTimer();
-       }, 1000)*/
     clearInterval(counterTime);
 }
 
 function generateRandomClass() {
-    let cardclasses = ["bell", "bell-copy", "snowglobe", "snowglobe-copy", "toy", "toy-copy", "pinetree", "pinetree-copy"
-        , "pinetreesnow", "pinetreesnow-copy", "present", "present-copy", "christmaspresent", "christmaspresent-copy", "giftbox", "giftbox-copy"];
+    let cardclasses = ["bell", "bell-copy", "snowglobe", "snowglobe-copy", "toy", "toy-copy", "pinetree", "pinetree-copy",
+         "pinetreesnow", "pinetreesnow-copy", "present", "present-copy", "christmaspresent", "christmaspresent-copy", "giftbox", "giftbox-copy"];
     let idchooser = 1;
     let copyofcardclasses = cardclasses.slice();
     let numberofcards = 16;
@@ -144,8 +141,8 @@ function removeOldClasses() {
 function generateNewGame() {
     let setLevelTime = sessionStorage.getItem("levelTime");
     let setLevelPoints = sessionStorage.getItem("levelPoints");
-    setLevelTime === null ? sessionStorage.setItem("time", "40") : sessionStorage.setItem("time", setLevelTime);
-    setLevelPoints === null ? localStorage.setItem("points", "300") : localStorage.setItem("points", setLevelPoints);
+    let timeOp = setLevelTime === null ? sessionStorage.setItem("time", "40") : sessionStorage.setItem("time", setLevelTime);
+    let pointOp = setLevelPoints === null ? localStorage.setItem("points", "300") : localStorage.setItem("points", setLevelPoints);
     localStorage.setItem("clicks", "0");
     localStorage.setItem("pairsleft", "8");
     localStorage.setItem("lastcard", " ");

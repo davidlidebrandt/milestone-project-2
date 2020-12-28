@@ -1,3 +1,4 @@
+
 function addScores(score) {
     let tempArray = [];
     let lastIndex = 4;
@@ -40,7 +41,7 @@ function printScore() {
     numArray = numArray.reverse();
 
     for (let i = 1, j = 0; i <= numArray.length; i++, j++) {
-        if (!(numArray[j] === 0))
+        if (numArray[j] > 0)
             $(`#score${i}`).html(`${numArray[j]} points`);
     }
 }

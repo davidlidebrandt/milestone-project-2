@@ -103,9 +103,9 @@ to find a pair of cards.
 * A timer at the bottom of the page that counts down time and ends the game if no pair is found in a certain amount of time.
 The timer also changes colors when time is beginning to run out, first to yellow then to red.
 
-* A modal that shows when a game is lost, which contains a link to the index page and a restart game button.
+* A modal that shows up when a game is lost, which contains a link to the index page and a restart game button.
 
-* A modal that shows when a game is won, which contains a link to the index page and a restart game button. There
+* A modal that shows up when a game is won, which contains a link to the index page and a restart game button. There
 are also two forms, one to submit your score to the leader board and one to submit your score to get a email with 
 that score through the EmailJS service.
 
@@ -134,7 +134,7 @@ To add interactivity to the project.
 
 * [JQuery](https://jquery.com/)
 
-JQuery functions where uses to manipulate the DOM and taking actions.
+JQuery functions where used to manipulate the DOM and to take actions.
 
 * [Bootstrap](https://getbootstrap.com/)
 
@@ -172,20 +172,20 @@ For testing the responsiveness across different devices.
 
 ## Testing
 
-* The CSS was ran through the W3C CSS Validation Service https://jigsaw.w3.org/css-validator/ , no errors found.
+* The CSS was run through the W3C CSS Validation Service https://jigsaw.w3.org/css-validator/ , no errors found.
 
-* The HTML was ran through the W3C Markup Validation Service https://validator.w3.org/, no errors found.
+* The HTML was run through the W3C Markup Validation Service https://validator.w3.org/, no errors found.
 
-* The JavaScript code was ran through https://jshint.com/, the only warnings that come up are of let,const and string literals
-only being available in ES6. It also warns about some variables not being defined/used which they are, they are just
+* The JavaScript code was run through https://jshint.com/, the only warnings that come up are of let, const and string literals
+only being available in ES6 (these warnings can easily be turned off or ignored if ES6 syntax is intended). It also warns about some variables not being defined/used which they are, they are just
 located in different JavaScript files.
 
 * The project was tested on three different web browsers: Chrome, Microsoft Edge and Firefox which all worked fine.
 Safari was only tested on mobile devices because no larger devices were available during the development process.
 
 * The responsiveness was tested with Chrome DevTools and http://whatismyscreenresolution.net/multi-screen-test 
-a wide variety of device screens were rendered and tested, from modern phones, tablets, desktops and even a 
-a few TV screens. The project looks fine on screens as small as 320 pixels, when the screen sizes get smaller
+,a wide variety of device screens were rendered and tested, from modern phones, tablets, desktops and even a 
+a few TV screens. The project looks fine on screens as small as 280 pixels wide, when the screen sizes get smaller
 than that the layout is not as nice but the site is still functional.
 
 All of the testing of the functions and features of the game was done manually, the main way of doing so was to use the console log and printing

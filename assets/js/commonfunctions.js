@@ -1,8 +1,8 @@
 
 function addScores(score) {
     let tempArray = [];
-    let lastIndex = 4;
-    let howManyScores = 5;
+    const lastIndex = 4;
+    const howManyScores = 5;
 
     for (let i = 1; i <= howManyScores; i++) {
         tempArray[i] = localStorage.getItem(`score${i}`);
@@ -30,7 +30,7 @@ function addScores(score) {
 function printScore() {
 
     let tempArray = [];
-    let numberOfScores = 5;
+    const numberOfScores = 5;
 
     for (let i = 1, j = 0; i <= numberOfScores; i++, j++) {
         tempArray[j] = localStorage.getItem(`score${i}`);
@@ -47,7 +47,7 @@ function printScore() {
 }
 
 function getAndPrintUsers() {
-    let showHowMany = 5;
+    const showHowMany = 5;
     for (let i = 1; i <= showHowMany; i++) {
         $(`#val-${i}`).html("");
     }

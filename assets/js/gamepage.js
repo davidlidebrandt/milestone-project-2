@@ -1,6 +1,5 @@
 
 let counterTime;
-let blockTime;
 let resetCard;
 
 generateNewGame();
@@ -139,10 +138,14 @@ function removeOldClasses() {
 }
 
 function generateNewGame() {
-    let setLevelTime = sessionStorage.getItem("levelTime");
-    let setLevelPoints = sessionStorage.getItem("levelPoints");
-    let timeOp = setLevelTime === null ? sessionStorage.setItem("time", "40") : sessionStorage.setItem("time", setLevelTime);
-    let pointOp = setLevelPoints === null ? localStorage.setItem("points", "300") : localStorage.setItem("points", setLevelPoints);
+    const setLevelTime = sessionStorage.getItem("levelTime");
+    const setLevelPoints = sessionStorage.getItem("levelPoints");
+    
+    if (setLevelTime === null && setLevelPoints === null) {
+        sessionStorage.setItem("time", "40");
+        localStorage.setItem("points", "300");
+    } else { sessionStorage.setItem("time", setLevelTime); localStorage.setItem("points", setLevelPoints); }
+
     localStorage.setItem("clicks", "0");
     localStorage.setItem("pairsleft", "8");
     localStorage.setItem("lastcard", " ");

@@ -7,6 +7,7 @@ function addScores(score) {
     for (let i = 1; i <= howManyScores; i++) {
         tempArray[i] = localStorage.getItem(`score${i}`);
     }
+    
     tempArray.shift();
     // first three lines was taken from an answer given by user "dy_" rergarding how to sort an array with bigger numbers https://stackoverflow.com/questions/1063007/how-to-sort-an-array-of-integers-correctly
     let numArray = new Int32Array(tempArray);
@@ -24,11 +25,9 @@ function addScores(score) {
     }
 
     printScore();
-
 }
 
 function printScore() {
-
     let tempArray = [];
     const numberOfScores = 5;
 
@@ -51,8 +50,10 @@ function getAndPrintUsers() {
     for (let i = 1; i <= showHowMany; i++) {
         $(`#val-${i}`).html("");
     }
+    
     let saveUser = [];
     let multiArr = [];
+    // basic structure of the get/then functions came from the firebase/firestore documentaion
     db.collection("user_points").get().then(function (querySnapshot) {
         querySnapshot.forEach(function (doc) {
             saveUser.push(doc.data());

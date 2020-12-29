@@ -42,40 +42,40 @@ function clickedCard() {
     //executed if no other card is shown
     if (localStorage.getItem("clicks") === "0") {
         localStorage.setItem("clicks", "1");
-        let arrayofclasses = this.className.split(" ");
-        let accountforcopy = arrayofclasses[0].split("-");
-        localStorage.setItem("lastcard", accountforcopy[0]);
+        let arrayOfClasses = this.className.split(" ");
+        let accountForCopy = arrayOfClasses[0].split("-");
+        localStorage.setItem("lastCard", accountForCopy[0]);
         $(this).removeClass("card");
     } else if (localStorage.getItem("clicks") === "1") {  //executed if another card is already shown
         $(".card").off();
         $(this).removeClass("card");
         localStorage.setItem("clicks", "0");
-        let arrayofclasses2 = this.className.split(" ");
-        let currentclass = arrayofclasses2[0].split("-");
-        let findmatch = currentclass[0];
+        let arrayOfClasses2 = this.className.split(" ");
+        let currentClass = arrayOfClasses2[0].split("-");
+        let findMatch = currentClass[0];
 
         // executed if match is found
-        if (findmatch === localStorage.getItem("lastcard")) {
-            let currentvalue = parseInt(localStorage.getItem("pairsleft"));
-            currentvalue--;
-            if (currentvalue === 0) {
+        if (findMatch === localStorage.getItem("lastCard")) {
+            let currentValue = parseInt(localStorage.getItem("pairsLeft"));
+            currentValue--;
+            if (currentValue === 0) {
                 $(".game-finished-modal").show();
                 addFinalScore();
                 blockTimer();
                 addScores(parseInt(localStorage.getItem("points")));
             } else {
-                localStorage.setItem("pairsleft", currentvalue);
+                localStorage.setItem("pairsLeft", currentValue);
                 resetTimer();
-                localStorage.setItem("lastcard", " ");
+                localStorage.setItem("lastCard", " ");
                 $(".card").on("click", clickedCard);
             }
         } else { //executed if no match is found
             resetCard = setTimeout(function () {
                 $(`#${id}`).addClass("card");
-                $(`.${localStorage.getItem("lastcard")}`).addClass("card");
-                $(`.${localStorage.getItem("lastcard")}-copy`).addClass("card");
+                $(`.${localStorage.getItem("lastCard")}`).addClass("card");
+                $(`.${localStorage.getItem("lastCard")}-copy`).addClass("card");
                 $(".card").on("click", clickedCard);
-                localStorage.setItem("lastcard", " ");
+                localStorage.setItem("lastCard", " ");
             }, 2000);
         }
     }
@@ -108,31 +108,31 @@ function blockTimer() {
 function generateRandomClass() {
     let cardclasses = ["bell", "bell-copy", "snowglobe", "snowglobe-copy", "toy", "toy-copy", "pinetree", "pinetree-copy",
          "pinetreesnow", "pinetreesnow-copy", "present", "present-copy", "christmaspresent", "christmaspresent-copy", "giftbox", "giftbox-copy"];
-    let idchooser = 1;
-    let copyofcardclasses = cardclasses.slice();
-    let numberofcards = 16;
-    const initalclasses = 16;
+    let idChooser = 1;
+    let copyOfCardClasses = cardclasses.slice();
+    let numberOfCards = 16;
+    const initalClasses = 16;
 
-    for (let i = 0; i < initalclasses; i++) {
-        let currentclass = copyofcardclasses[Math.floor(Math.random() * (numberofcards))];
-        $(`#${idchooser}`).addClass(currentclass);
-        $(`#${idchooser}`).addClass("card-flipped");
-        copyofcardclasses.splice(copyofcardclasses.indexOf(currentclass), 1);
-        idchooser++;
-        numberofcards--;
+    for (let i = 0; i < initalClasses; i++) {
+        let currentClass = copyOfCardClasses[Math.floor(Math.random() * (numberOfCards))];
+        $(`#${idChooser}`).addClass(currentClass);
+        $(`#${idChooser}`).addClass("card-flipped");
+        copyOfCardClasses.splice(copyOfCardClasses.indexOf(currentClass), 1);
+        idChooser++;
+        numberOfCards--;
     }
 }
 
 function addGeneralClass() {
-    const initalclasses = 16;
-    for (let i = 1; i <= initalclasses; i++) {
+    const initalClasses = 16;
+    for (let i = 1; i <= initalClasses; i++) {
         $(`#${i}`).addClass("card");
     }
 }
 
 function removeOldClasses() {
-    const initalclasses = 16;
-    for (let i = 1; i <= initalclasses; i++) {
+    const initalClasses = 16;
+    for (let i = 1; i <= initalClasses; i++) {
         $(`#${i}`).removeClass();
     }
 }
@@ -147,8 +147,8 @@ function generateNewGame() {
     } else { sessionStorage.setItem("time", setLevelTime); localStorage.setItem("points", setLevelPoints); }
 
     localStorage.setItem("clicks", "0");
-    localStorage.setItem("pairsleft", "8");
-    localStorage.setItem("lastcard", " ");
+    localStorage.setItem("pairsLeft", "8");
+    localStorage.setItem("lastCard", " ");
     generateRandomClass();
     addGeneralClass();
     resetTimer();
@@ -158,7 +158,7 @@ function addFinalScore() {
     $(".game-finished-modal>h5").html(`You finished the game with ${localStorage.getItem("points")} points`);
 }
 
-// code from the the emailjs documentation
+// basic structure came from the the emailjs documentation
 function sendMail(form) {
     emailjs.send('default_service', 'template_fxoyyj6', {
         user_email: form.email.value,
@@ -172,8 +172,8 @@ function sendMail(form) {
     return false;
 }
 
+// basic structure came from the firebase/firestore documentation
 function sendScore(form) {
-    // from the firebase/firestore documentation on how to write data to the database
     db.collection("user_points").add({
         user_name: form.user.value,
         user_points: localStorage.getItem("points")

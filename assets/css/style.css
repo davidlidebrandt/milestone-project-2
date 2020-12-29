@@ -28,16 +28,12 @@ body {
     display: none;
     border: solid 1px #000000;
     position: absolute;
-    border-radius: 10px;
     box-shadow: 1px 1px 1px #808080;
     z-index: 100;
     background-color: #F4FAEF;
     text-align: center;
-    width: 50%;
-    left: 25%;
-    right: 25%;
-    /*top: 15%;
-    bottom: 15%;*/
+    width: 100%;
+    left: 0;
 }
 
 .modal-h5 {
@@ -69,7 +65,7 @@ button:focus {
 }
 
 .nav-window {
-    width: 70%;
+    width: 90%;
     background-color: #FAF3D1;
     border-radius: 10px;
     margin: auto;
@@ -416,8 +412,8 @@ margin-bottom: 20px;
 }
 
 .card-flipped {
-    height: 120px;
-    width: 80px;
+    height: 100px;
+    width: 60px;
     margin: 0 auto;
     margin-top: 20px;
     background-repeat: no-repeat;
@@ -429,8 +425,8 @@ margin-bottom: 20px;
 }
 
 .card, .card-copy {
-    height: 120px;
-    width: 80px;
+    height: 100px;
+    width: 60px;
     box-shadow: 1px 1px 1px #808080;
     border-radius: 8px;
     border: solid 2px #000000;
@@ -451,26 +447,33 @@ margin-bottom: 20px;
 
 /*media queries*/
 
-@media only screen and (max-width: 600px) {
+@media only screen and (min-width: 600.5px) {
     
     .card, .card-copy, .card-flipped {
-    height: 100px;
-    width: 60px;
+    height: 120px;
+    width: 80px;
     }
 
     .nav-window {
-    width: 90%;
+    width: 70%;
     }
 
     .base-modal {
-    width: 100%;
-    left: 0;
-    border-radius: 0px;
+    border-radius: 10px;
+    width: 50%;
+    left: 25%;
+    right: 25%;
     }
 }
 
 @media only screen and (min-width: 767.5px) {
     .nav-window {
     width: 50%;
+    }
+}
+
+@media only screen and (min-width: 1500px) {
+    .nav-window {
+    width: 30%;
     }
 }

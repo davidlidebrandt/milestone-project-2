@@ -477,3 +477,9 @@ margin-bottom: 20px;
     width: 30%;
     }
 }
+
+@media only screen and (max-width: 398.5px) {
+    .ht-modal {
+        top: 0;
+    }
+}

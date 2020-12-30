@@ -7,11 +7,8 @@ generateNewGame();
 $(document).ready(function () {
 
     $("#timer").html(time + " SECONDS LEFT");
-
     $(".card").on("click", clickedCard);
-
     $(".nav-btn-newgame").on("click", resetGame);
-
     $(".restart-btn").on("click", resetGame);
 
     function resetGame() {
@@ -34,9 +31,10 @@ function clickedCard() {
     }
 
     let points = parseInt(localStorage.getItem("points"));
+    let id = this.id;
+    
     points--;
     localStorage.setItem("points", points);
-    let id = this.id;
     $(this).off();
 
     //executed if no other card is shown
@@ -144,7 +142,8 @@ function generateNewGame() {
     if (setLevelTime === null && setLevelPoints === null) {
         sessionStorage.setItem("time", "40");
         localStorage.setItem("points", "300");
-    } else { sessionStorage.setItem("time", setLevelTime); localStorage.setItem("points", setLevelPoints); }
+    } else { 
+        sessionStorage.setItem("time", setLevelTime); localStorage.setItem("points", setLevelPoints); }
 
     localStorage.setItem("clicks", "0");
     localStorage.setItem("pairsLeft", "8");
@@ -186,5 +185,3 @@ function sendScore(form) {
         });
     return false;
 }
-
-

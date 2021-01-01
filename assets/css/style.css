@@ -110,7 +110,7 @@ button:focus {
     padding-bottom: 6px;
     box-shadow: 0.5px 0.5px 0.5px #808080;;
     display: inline;
-    color: black;
+    color: #000000;
 }
 
 
@@ -271,7 +271,7 @@ margin-bottom: 20px;
 
 .nav-btn-home:hover, .nav-btn-newgame:hover {
     text-decoration: underline;
-    color: black;
+    color: #000000;
 }
 
 .nav-btn-home, .nav-btn-newgame {
@@ -330,109 +330,93 @@ margin-bottom: 20px;
 }
 
 /*card classes*/
-.bell {
-    background-image: url("../images/icons/bell.png");
+.bell, .bell-copy, .snowglobe, .snowglobe-copy, .toy, .toy-copy, .pinetree, .pinetree-copy, .pinetreesnow, .pinetreesnow-copy, .present, .present-copy, .christmaspresent, .christmaspresent-copy, .giftbox, .giftbox-copy {
     background-size: contain;
+}
+
+.bell {
+    background-image: url("../images/icons/bell.png"); 
 }
 
 .bell-copy {
     background-image: url("../images/icons/bell.png");
-    background-size: contain;
 }
 
 .snowglobe {
     background-image: url("../images/icons/snowglobe.png");
-    background-size: contain;
 }
 
 .snowglobe-copy {
     background-image: url("../images/icons/snowglobe.png");
-    background-size: contain;
 }
 
 .toy {
     background-image: url("../images/icons/toy.png");
-    background-size: contain;
 }
 
 .toy-copy {
     background-image: url("../images/icons/toy.png");
-    background-size: contain;
 }
 
 .pinetree {
     background-image: url("../images/icons/pinetree.png");
-    background-size: contain;
 }
 
 .pinetree-copy {
     background-image: url("../images/icons/pinetree.png");
-    background-size: contain;
 }
 
 .pinetreesnow {
     background-image: url("../images/icons/pinetree-snow.png");
-    background-size: contain;
 }
 
 .pinetreesnow-copy {
     background-image: url("../images/icons/pinetree-snow.png");
-    background-size: contain;
 }
 
 .present {
     background-image: url("../images/icons/present.png");
-    background-size: contain;
 }
 
 .present-copy {
     background-image: url("../images/icons/present.png");
-    background-size: contain;
 }
 
 .christmaspresent {
     background-image: url("../images/icons/christmaspresent.png");
-    background-size: contain;
 }
 
 .christmaspresent-copy {
     background-image: url("../images/icons/christmaspresent.png");
-    background-size: contain;
 }
 
 .giftbox {
     background-image: url("../images/icons/giftbox.png");
-    background-size: contain;
 }
 
 .giftbox-copy {
     background-image: url("../images/icons/giftbox.png");
-    background-size: contain;
 }
 
-.card-flipped {
+.card, .card-copy, .card-flipped {
     height: 100px;
     width: 60px;
     margin: 0 auto;
-    margin-top: 20px;
-    background-repeat: no-repeat;
-    background-size: contain;
+    margin-top: 15px;
     box-shadow: 1px 1px 1px #808080;
     border-radius: 8px;
     border: solid 2px #000000;
+
+}
+
+.card-flipped {
+    background-repeat: no-repeat;
+    background-size: contain;
     background-position: center;
 }
 
 .card, .card-copy {
-    height: 100px;
-    width: 60px;
-    box-shadow: 1px 1px 1px #808080;
-    border-radius: 8px;
-    border: solid 2px #000000;
     background-color: #E5EFEE;
-    margin-bottom: 15px;
-    margin: 0 auto;
-    margin-top: 20px;
     background-size: 40px 40px;
 }
 

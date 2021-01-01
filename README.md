@@ -183,10 +183,18 @@ located in different JavaScript files.
 * The project was tested on three different web browsers: Chrome, Microsoft Edge and Firefox which all worked fine.
 Safari was only tested on mobile devices because no larger devices were available during the development process.
 
-* The responsiveness was tested with Chrome DevTools and http://whatismyscreenresolution.net/multi-screen-test 
-,a wide variety of device screens were rendered and tested, from modern phones, tablets, desktops and even a 
+* The responsiveness was tested with Chrome DevTools and http://whatismyscreenresolution.net/multi-screen-test , a wide variety of device screens were rendered and tested, from modern phones, tablets, desktops and even a 
 a few TV screens. The project looks fine on screens as small as 280 pixels wide, when the screen sizes get smaller
 than that the layout is not as nice but the site is still functional.
+
+* The performance was tested on https://www.webpagetest.org/, location was set to Stockholm and the browser was set to
+Chrome. 
+Results for the index page can be found here: https://www.webpagetest.org/result/210101_DiAM_fb3d6393dfb4b4ca875f25a922116976/,
+Results for the game page can be found here: https://www.webpagetest.org/result/210101_DiRW_e24a8b0d3fc19cb957aa8c0ff00b8d86/.
+The main issues with the site seems to be related to security and the fact that the custom JavaScript and CSS files
+are not cached. The cache warning could possibly be fixed by hosting your CSS and JavaScript on a CDN service, something
+I will look into for my next project. As my skills and knowledge increases I will be looking to also fix the security
+issues, but as of now it will be left as it is.
 
 All of the testing of the functions and features of the game was done manually, the main way of doing so was to use the console log and printing
 out corresponding values during certain parts of the execution of the code. A lot of testing was also done by just

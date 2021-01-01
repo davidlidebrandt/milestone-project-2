@@ -157,16 +157,22 @@ function addFinalScore() {
     $(".game-finished-modal>h5").html(`You finished the game with ${localStorage.getItem("points")} points`);
 }
 
+//code from toastr documentation on how to center their elements
+toastr.options = {
+    positionClass: 'toast-top-center'
+};
+
 // basic structure came from the the emailjs documentation
 function sendMail(form) {
     emailjs.send('default_service', 'template_fxoyyj6', {
         user_email: form.email.value,
         score: localStorage.getItem("points")
     })
+        //notifications from toastr
         .then(function (response) {
-            alert("You succesfully sent your score ", response.text);
+            toastr.success("Your score was successfully sent", response.text);
         }, function (error) {
-            alert("An error occured", error);
+            toastr.error("An error occured", error);
         });
     return false;
 }
@@ -177,11 +183,12 @@ function sendScore(form) {
         user_name: form.user.value,
         user_points: localStorage.getItem("points")
     })
+        //notifications from toastr
         .then(function (docRef) {
-            alert("Your score was sent", docRef.id);
+            toastr.success("Your score was successfully sent", docRef.id);
         })
         .catch(function (error) {
-            alert("Error sending your score: ", error);
+            toastr.error("An error occured", error);
         });
     return false;
 }

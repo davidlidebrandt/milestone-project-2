@@ -120,6 +120,9 @@ clicks that are allowed between finding pairs of cards and reducing the time of 
 * Adding a new type of card game, for example a game where the player has to remember the positions of a sequence
 of cards.
 
+* Adding a log in function so that a user can log in to register and keep track of their scores across 
+different devices/web browsers.
+
 ## Technologies Used
 
 * HTML

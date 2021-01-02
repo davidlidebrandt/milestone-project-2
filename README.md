@@ -62,7 +62,9 @@ highly depends on the visual impact the need for this seems less important.
 
 * As a user I want both a fun and challenging experience.
 
+* As a user I want to be able to see my previous highest scores.
 
+* As a user I want to see how well my scores compare to other users.
 
 #### Wireframes and Mockups
 
@@ -323,6 +325,15 @@ prevent any unwanted disturbance.
 
 The game requires the use of memory and speed as well as handling the stress of the time on the timer running
 out. Changing the levels really makes a difference in the difficulty of the game.
+
+* As a user I want to be able to see my previous highest scores.
+
+There is a high scores modal which shows the five highest scores obtained from the current web browser.
+
+* As a user I want to see how well my scores compare to other users.
+
+There is a leader board modal that displays the five highest scores obtained by users who has submitted their score
+and user name.
 
 ## Deployment
 

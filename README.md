@@ -326,18 +326,37 @@ out. Changing the levels really makes a difference in the difficulty of the game
 
 ## Deployment
 
+### Publishing the project
 The project was deployed on Github Pages on https://github.com/, the following steps were taken:
-1. Went to https://github.com/.
+1. Went to and logged in to https://github.com/.
 2. Chose the right repository on the left side of the page.
 3. Clicked on the settings icon.
 4. Scrolled down to the Github Pages section.
 5. Chose the master branch as source and pressed save.
 6. Found the link to the deployed project in the Github Pages section after a few minutes.
 
-
 [Link to the repository](https://github.com/davidlidebrandt/milestone-project-2) <br><br>
 [Link to the deployed project](https://davidlidebrandt.github.io/milestone-project-2/)
 
+### Forking the project
+1. Go to and log in to https://github.com/.
+2. Go to the repository: https://github.com/davidlidebrandt/milestone-project-2
+3. Press the fork button located on the right side.
+4. Make your changes to the project.
+5. If you wish to merge your changes to the original project:
+6. Press the pull request button from your forked repository.
+7. Press the button new pull request.
+8. Choose the branches you wish to merge.
+9. Press the Create pull request button.
+
+### Cloning the project
+There are several ways of cloning the project, here I am going to describe how to do it using
+the URL and Git Bash.
+1. Go to the repository: https://github.com/davidlidebrandt/milestone-project-2
+2. Click the Code button.
+3. Choose HTTPS and copy the link that is provided.
+4. Open Git Bash and navigate to the directory where you want to save the cloned project.
+5. Type git clone followed by the url you copied, git clone https://github.com/davidlidebrandt/milestone-project-2.git
 
 ## Credits 
 

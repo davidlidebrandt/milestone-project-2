@@ -466,4 +466,9 @@ margin-bottom: 20px;
     .ht-modal {
         top: 0;
     }
+
+    .base-modal {
+        min-height: 100%;
+        top: 0;
+    }
 }

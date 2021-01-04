@@ -1,12 +1,13 @@
 
 let counterTime;
 let resetCard;
+let time;
 
 generateNewGame();
 
 $(document).ready(function () {
 
-    $("#timer").html(time + " SECONDS LEFT");
+    $("#timer").html(`${time} SECONDS LEFT`);
     $(".card").on("click", clickedCard);
     $(".nav-btn-newgame").on("click", resetGame);
     $(".restart-btn").on("click", resetGame);
@@ -19,7 +20,7 @@ $(document).ready(function () {
         $(".game-over-modal").hide();
         $(".game-finished-modal").hide();
         $(".card").on("click", clickedCard);
-        $("#timer").html(time + " SECONDS LEFT");
+        $("#timer").html(`${time} SECONDS LEFT`);
     }
 
 }); //end of ready function

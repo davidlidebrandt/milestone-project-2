@@ -449,6 +449,12 @@ margin-bottom: 20px;
     }
 }
 
+@media only screen and (max-width: 400px) and (max-height: 500px) {
+    .lb-modal {
+        top: 0;
+    }
+}
+
 @media only screen and (min-width: 600.5px) {
 
     .nav-window {
@@ -457,10 +463,9 @@ margin-bottom: 20px;
 
     .base-modal {
     border-radius: 10px;
-    width: 50%;
-    left: 25%;
-    right: 25%;
-    min-height: 0;
+    width: 60%;
+    left: 20%;
+    right: 20%;
     }
 }
 

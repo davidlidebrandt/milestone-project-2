@@ -431,6 +431,17 @@ margin-bottom: 20px;
 
 /*media queries*/
 
+@media only screen and (max-height: 540px) {
+    .card, .card-copy, .card-flipped {
+    height: 80px;
+    width: 48px;
+    }
+
+    .card, .card-copy {
+    background-size: 35px 35px;
+}
+}
+
 @media only screen and (min-width: 600.5px) and (min-height: 650px) {
     .card, .card-copy, .card-flipped {
     height: 120px;

@@ -33,6 +33,7 @@ body {
     background-color: #F4FAEF;
     text-align: center;
     width: 98%;
+    border-radius: 10px;
 }
 
 .modal-h5 {
@@ -455,14 +456,12 @@ margin-bottom: 20px;
     }
 }
 
-@media only screen and (min-width: 600.5px) {
-
+@media only screen and (min-width: 600.5px) and (min-height: 600.5px) {
     .nav-window {
     width: 70%;
     }
 
     .base-modal {
-    border-radius: 10px;
     width: 60%;
     left: 20%;
     right: 20%;
